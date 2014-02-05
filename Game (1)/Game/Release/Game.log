@@ -1,0 +1,80 @@
+﻿Build started 1/15/2014 1:27:30 AM.
+     1>Project "C:\Users\Branden Howard\Dropbox\Game (1)\Game\Game.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\Game.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AI.cpp BMP.cpp Collision.cpp DebugConsole.cpp Doods.cpp Graphics.cpp Input.cpp Main.cpp Object.cpp Physics.cpp Player.cpp Point.cpp Region.cpp Vector.cpp Weapon.cpp WndProc.cpp
+         AI.cpp
+         BMP.cpp
+         Collision.cpp
+         DebugConsole.cpp
+         Doods.cpp
+         Graphics.cpp
+     1>Graphics.cpp(280): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(281): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(345): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(346): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(347): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(348): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(359): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(360): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(361): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(362): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(373): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(374): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(375): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(376): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(387): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(388): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(389): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(390): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(430): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(431): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(432): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(433): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(434): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(443): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>Graphics.cpp(444): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(445): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(446): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>Graphics.cpp(447): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Input.cpp
+     1>Input.cpp(142): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Input.cpp(147): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Main.cpp
+         Object.cpp
+         Physics.cpp
+         Player.cpp
+         Point.cpp
+         Region.cpp
+     1>Region.cpp(94): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Region.cpp(106): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Region.cpp(118): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Region.cpp(130): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Vector.cpp
+         Weapon.cpp
+         WndProc.cpp
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Branden Howard\Dropbox\Game (1)\Release\Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Branden Howard\Dropbox\Game (1)\Release\Game.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Branden Howard\Dropbox\Game (1)\Release\Game.lib" /MACHINE:X86 Release\AI.obj
+         Release\BMP.obj
+         Release\Collision.obj
+         Release\DebugConsole.obj
+         Release\Doods.obj
+         Release\Graphics.obj
+         Release\Input.obj
+         Release\Main.obj
+         Release\Object.obj
+         Release\Physics.obj
+         Release\Player.obj
+         Release\Point.obj
+         Release\Region.obj
+         Release\Vector.obj
+         Release\Weapon.obj
+         Release\WndProc.obj
+     1>AI.obj : error LNK2001: unresolved external symbol _SOIL_load_OGL_texture
+     1>C:\Users\Branden Howard\Dropbox\Game (1)\Release\Game.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "C:\Users\Branden Howard\Dropbox\Game (1)\Game\Game.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.71
