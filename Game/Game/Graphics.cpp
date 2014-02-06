@@ -277,8 +277,8 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
     glLoadIdentity();                           // Reset The Current Matrix
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_BLEND);
-	x = -regionWidth/2;
-	y = -regionHeight/2;
+	x = -regionWidth/2.0f;
+	y = -regionHeight/2.0f;
     glTranslatef(-P1->pos.x, -P1->pos.y, z-25.0f);                      // Move Into The Screen 5 Units
 
 	glRotatef(xrot,1.0f,0.0f,0.0f);                     // Rotate On The X Axis
@@ -342,10 +342,10 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 						glBindTexture(GL_TEXTURE_2D, texture[2]); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
-							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001);  // Bottom Left Of The Texture and Quad
-							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001);  // Bottom Right Of The Texture and Quad
-							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001);  // Top Right Of The Texture and Quad
-							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001);  // Top Left Of The Texture and Quad
+							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
+							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001f);  // Bottom Right Of The Texture and Quad
+							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001f);  // Top Right Of The Texture and Quad
+							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001f);  // Top Left Of The Texture and Quad
 						glEnd();
 						door1 = true;
 					}
@@ -356,10 +356,10 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 						glBindTexture(GL_TEXTURE_2D, texture[2]); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
-							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001);  // Bottom Left Of The Texture and Quad
-							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001);  // Bottom Right Of The Texture and Quad
-							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001);  // Top Right Of The Texture and Quad
-							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001);  // Top Left Of The Texture and Quad
+							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
+							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001f);  // Bottom Right Of The Texture and Quad
+							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001f);  // Top Right Of The Texture and Quad
+							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001f);  // Top Left Of The Texture and Quad
 						glEnd();
 						door2 = true;
 					}
@@ -370,10 +370,10 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 						glBindTexture(GL_TEXTURE_2D, texture[2]); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
-							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001);  // Bottom Left Of The Texture and Quad
-							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001);  // Bottom Right Of The Texture and Quad
-							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001);  // Top Right Of The Texture and Quad
-							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001);  // Top Left Of The Texture and Quad
+							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
+							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001f);  // Bottom Right Of The Texture and Quad
+							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001f);  // Top Right Of The Texture and Quad
+							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001f);  // Top Left Of The Texture and Quad
 						glEnd();
 						door3 = true;
 					}
@@ -384,10 +384,10 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 						glBindTexture(GL_TEXTURE_2D, texture[2]); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
-							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001);  // Bottom Left Of The Texture and Quad
-							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001);  // Bottom Right Of The Texture and Quad
-							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001);  // Top Right Of The Texture and Quad
-							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001);  // Top Left Of The Texture and Quad
+							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
+							glTexCoord2f(1.0f, 0.0f); glVertex3f(i + 3.0f, j, -0.001f);  // Bottom Right Of The Texture and Quad
+							glTexCoord2f(1.0f, 1.0f); glVertex3f(i + 3.0f, j + 4.0f, -0.001f);  // Top Right Of The Texture and Quad
+							glTexCoord2f(0.0f, 1.0f); glVertex3f(i, j + 4.0f, -0.001f);  // Top Left Of The Texture and Quad
 						glEnd();
 						door4 = true;
 					}
@@ -444,11 +444,11 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 
 		glBegin(GL_QUADS);
 		//draw all objects
-			glColor3f(0, 0.6, 1.0);          // Set The Color
-			glVertex3f(i.pos.x - i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1);  // Bottom Left Of The Texture and Quad
-			glVertex3f(i.pos.x + i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1);  // Bottom Right Of The Texture and Quad
-			glVertex3f(i.pos.x + i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1);  // Top Right Of The Texture and Quad
-			glVertex3f(i.pos.x - i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1);  // Top Left Of The Texture and Quad
+			glColor3f(0, 0.6f, 1.0f);          // Set The Color
+			glVertex3f(i.pos.x - i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1f);  // Bottom Left Of The Texture and Quad
+			glVertex3f(i.pos.x + i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1f);  // Bottom Right Of The Texture and Quad
+			glVertex3f(i.pos.x + i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1f);  // Top Right Of The Texture and Quad
+			glVertex3f(i.pos.x - i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1f);  // Top Left Of The Texture and Quad
 		glEnd();
 	}
 	for(std::vector<Hitbox*>::iterator it = hitboxes.begin(); it != hitboxes.end(); ++it)
@@ -457,11 +457,11 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 
 		glBegin(GL_QUADS);
 		//draw all objects
-			glColor3f(1.0, 0.3, 0.0);          // Set The Color
-			glVertex3f(i.pos.x - i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1);  // Bottom Left Of The Texture and Quad
-			glVertex3f(i.pos.x + i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1);  // Bottom Right Of The Texture and Quad
-			glVertex3f(i.pos.x + i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1);  // Top Right Of The Texture and Quad
-			glVertex3f(i.pos.x - i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1);  // Top Left Of The Texture and Quad
+			glColor3f(1.0f, 0.3f, 0.0f);          // Set The Color
+			glVertex3f(i.pos.x - i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1f);  // Bottom Left Of The Texture and Quad
+			glVertex3f(i.pos.x + i.width/2, i.pos.y - i.height/2, i.pos.z + 0.1f);  // Bottom Right Of The Texture and Quad
+			glVertex3f(i.pos.x + i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1f);  // Top Right Of The Texture and Quad
+			glVertex3f(i.pos.x - i.width/2, i.pos.y + i.height/2, i.pos.z + 0.1f);  // Top Left Of The Texture and Quad
 		glEnd();
 	}
 

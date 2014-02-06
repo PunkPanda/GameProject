@@ -145,12 +145,12 @@ void InputUpdate(void)
 			}
 			else if(P1->gridCollision & COLLISION_RAMP_LEFT)
 			{
-				P1->pos.y = int(P1->pos.y) + 1;
+				P1->pos.y = int(P1->pos.y) + 1.0f;
 				P1->vel.y = P1->jumpHeight;
 			}
 			else if(P1->gridCollision & COLLISION_RAMP_RIGHT)
 			{
-				P1->pos.y = int(P1->pos.y) + 1;
+				P1->pos.y = int(P1->pos.y) + 1.0f;
 				P1->vel.y = P1->jumpHeight;
 			}
 		}

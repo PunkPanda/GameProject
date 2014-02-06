@@ -135,7 +135,7 @@ void LoadRegion(const char* regionName)
 			for(short j = regionHeight-1; j >= 0; --j)
 				if(currentRegion[i][j] == '1')
 				{
-					P1->pos.x = i+1;
+					P1->pos.x = i+1.0f;
 					P1->pos.y = j;
 					j = -1;
 					i = regionWidth;
@@ -147,7 +147,7 @@ void LoadRegion(const char* regionName)
 			for(short j = regionHeight-1; j >= 0; --j)
 				if(currentRegion[i][j] == '2')
 				{
-					P1->pos.x = i+1;
+					P1->pos.x = i+1.0f;
 					P1->pos.y = j;
 					j = -1;
 					i = regionWidth;
@@ -159,7 +159,7 @@ void LoadRegion(const char* regionName)
 			for(short j = regionHeight-1; j >= 0; --j)
 				if(currentRegion[i][j] == '3')
 				{
-					P1->pos.x = i+1;
+					P1->pos.x = i+1.0f;
 					P1->pos.y = j;
 					j = -1;
 					i = regionWidth;
@@ -171,7 +171,7 @@ void LoadRegion(const char* regionName)
 			for(short j = regionHeight-1; j >= 0; --j)
 				if(currentRegion[i][j] == '4')
 				{
-					P1->pos.x = i+1;
+					P1->pos.x = i+1.0f;
 					P1->pos.y = j;
 					j = -1;
 					i = regionWidth;
