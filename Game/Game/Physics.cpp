@@ -14,79 +14,90 @@ void PhysicsUpdate(void)
 
 	for(std::list<Dood*>::iterator it = doods.begin(); it != doods.end(); ++it)
 	{
-		bool gravFlag = true;
-		Object* i = (*it);
-
-		if(!i->active)
+		//check if slot in doodlist is active or not
+		if(!(*it)->active)
+			continue;
+		//skip physics if object is static
+		if((*it)->Static)
 			continue;
 
-		if(!i->Static)
+		//returns a bool indicating whether or not to apply gravity
+		if(MapCollision(*it))
 		{
-			i->gridCollision = GridCollision(i->pos, i->width, i->height);
+			ApplyGravity(*it);
+		}
+		else	//apply friction if contacting the floor
+		{
+			ApplyFriction(*it);
+		}
+		//apply velocity
+		(*it)->pos += (*it)->vel;
+	}
+}
 
-			if(i->gridCollision & COLLISION_RAMP_RIGHT)
-			{
-				RampSnapUpRight(i->pos, i->width, i->height);
-				i->vel.y = 0;
-				gravFlag = false;
-			}
-			else if(i->gridCollision & COLLISION_RAMP_LEFT)
-			{
-				RampSnapUpLeft(i->pos, i->width, i->height);
-				i->vel.y = 0;
-				gravFlag = false;
-			}
-			else
-			{
-				if(i->gridCollision & COLLISION_LEFT)
-				{
-					SnapUp(i->pos.x, i->width);
-					i->vel.x = 0;
-				}
-				if(i->gridCollision & COLLISION_RIGHT)
-				{
-					SnapDown(i->pos.x, i->width);
-					i->vel.x = 0;
-				}
-				if(i->gridCollision & COLLISION_TOP)
-				{
-					SnapDown(i->pos.y, i->height);
-					i->vel.y = 0;
-				}
-				if(i->gridCollision & COLLISION_BOTTOM)
-				{
-					SnapUp(i->pos.y, i->height);
-					i->vel.y = 0;
-					gravFlag = false;
-				}
-			}
-			if(gravFlag)
-				ApplyGravity(i);
-			else	//apply friction
-			{
-				if(i->vel.x > 0)
-				{
-					i->vel.x -= 0.00002f;
-					if(i->vel.x < 0.00002f)
-						i->vel.x = 0;
-				}
-				else if(i->vel.x < 0)
-				{
-					i->vel.x += 0.00002f;
-					if(i->vel.x > -0.00002f)
-						i->vel.x = 0;
-				}
-			}
+bool MapCollision(Object* obj)
+{
+	obj->gridCollision = GridCollision(obj->pos, obj->width, obj->height);
 
-			i->pos += i->vel;
+	if(obj->gridCollision & COLLISION_RAMP_RIGHT)
+	{
+		RampSnapUpRight(obj->pos, obj->width, obj->height);
+		obj->vel.y = 0;
+		return false;
+	}
+	else if(obj->gridCollision & COLLISION_RAMP_LEFT)
+	{
+		RampSnapUpLeft(obj->pos, obj->width, obj->height);
+		obj->vel.y = 0;
+		return false;
+	}
+	else
+	{
+		if(obj->gridCollision & COLLISION_LEFT)
+		{
+			SnapUp(obj->pos.x, obj->width);
+			obj->vel.x = 0;
+		}
+		if(obj->gridCollision & COLLISION_RIGHT)
+		{
+			SnapDown(obj->pos.x, obj->width);
+			obj->vel.x = 0;
+		}
+		if(obj->gridCollision & COLLISION_TOP)
+		{
+			SnapDown(obj->pos.y, obj->height);
+			obj->vel.y = 0;
+		}
+		if(obj->gridCollision & COLLISION_BOTTOM)
+		{
+			SnapUp(obj->pos.y, obj->height);
+			obj->vel.y = 0;
+			return false;
 		}
 	}
+	return true;
 }
 
 void ApplyGravity(Object* obj)
 {
 	if(abs(obj->vel.y < 0.5))
 		obj->vel.y -= 0.00001f; //replace this later
+}
+
+void ApplyFriction(Object* obj)
+{
+	if(obj->vel.x > 0)
+	{
+		obj->vel.x -= 0.00002f;
+		if(obj->vel.x < 0.00002f)
+			obj->vel.x = 0;
+	}
+	else if(obj->vel.x < 0)
+	{
+		obj->vel.x += 0.00002f;
+		if(obj->vel.x > -0.00002f)
+			obj->vel.x = 0;
+	}
 }
 
 int GridCollision(Point pos, float width, float height)
