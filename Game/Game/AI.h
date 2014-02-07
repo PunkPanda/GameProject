@@ -2,7 +2,8 @@
 
 class AI : public Dood
 {	
-	public:
+	public:		
+
 		enum Type
 		{
 			STANDARD,
@@ -14,26 +15,9 @@ class AI : public Dood
 			STANDING,
 			CROUCHING,
 			CRAWLING
-		}Orientation;
+		}Orientation;	
 
-		float standHeight;
-		float crouchHeight;
-		float crawlHeight;
-
-		float standWidth;
-		float crawlWidth;
-
-		float walkSpeed;
-		float runSpeed;
-		float currentSpeed;
-		float maxSpeed;
-		float jumpHeight;
-
-		bool bumpFlag;
-
-		AI(Point p, Point r, float w, float h, Vector rgb, bool s, float cHeight, enum AI::Type t) : Dood(p, r, w, h, rgb, s, 3), 
-		crouchHeight(cHeight), standHeight(h), standWidth(w), crawlHeight(standHeight/4), crawlWidth(h), walkSpeed(0.002f), runSpeed(0.005f), currentSpeed(runSpeed), maxSpeed(runSpeed*2), 
-		jumpHeight(0.01f), Orientation(STANDING), bumpFlag(false), Type(t)
+		AI(Point p, Point r, float w, float h, Vector rgb, bool s, float cHeight, enum AI::Type t) : Dood(p, r, w, h, rgb, s, 3), Type(t)
 		{
 			classType = A_I;
 		};

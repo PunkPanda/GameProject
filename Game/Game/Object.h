@@ -2,7 +2,6 @@
 #include "Point.h"
 #include "Vector.h"
 
-
 #include <Windows.h>
 #include "Graphics.h"
 

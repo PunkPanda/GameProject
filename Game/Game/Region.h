@@ -16,11 +16,11 @@ extern std::string nextRegion4;
 
 extern std::vector<std::string> adjRegions;
 
-extern std::string backgroundImage;
+extern std::string backgroundImage;		//strings for holding names of region based textures
 extern std::string tileImage;
 extern std::string doorImage;
 
-extern GLuint basetileTex;
+extern GLuint basetileTex;			//region based texture objects
 extern GLuint doorTex;
 extern GLuint backgroundTex;
 

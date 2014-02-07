@@ -24,7 +24,7 @@ int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 
 	LoadRegion("Region/Start.txt");
 
-		// Player creation
+	// Player creation
 	createPlayer(Point(3.0f, 3.0f, 0.02f) , Point(0.0f, 0.0f), 2.0f, 4.0f, Vector(1.0f, 1.0f, 1.0f), false);
 
 	while(!done) // Loop that runs until done == TRUE
