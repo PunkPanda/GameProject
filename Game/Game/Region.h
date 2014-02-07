@@ -20,6 +20,10 @@ extern std::string backgroundImage;
 extern std::string tileImage;
 extern std::string doorImage;
 
+extern GLuint basetileTex;
+extern GLuint doorTex;
+extern GLuint backgroundTex;
+
 extern short regionWidth;
 extern short regionHeight;
 

@@ -4,7 +4,7 @@
 #include "AI.h"
 #include <fstream>
 #include "Graphics.h"
-#include "Collision.h"
+#include "Combat.h"
 
 char** currentRegion;
 
@@ -19,6 +19,10 @@ std::string backgroundImage;
 std::string tileImage;
 std::string doorImage;
 
+GLuint basetileTex;
+GLuint doorTex;
+GLuint backgroundTex;
+
 short regionWidth;
 short regionHeight;
 
@@ -31,15 +35,7 @@ void createDoor(Point p, Point r, float w, float h, Vector rgb, std::string regi
 	objects.push_back(door);
 
 	/* load an image file directly as a new OpenGL texture */
-	door->texture[0] = SOIL_load_OGL_texture
-		(
-		"Assets/Door.bmp",
-		SOIL_LOAD_AUTO,
-		SOIL_CREATE_NEW_ID,
-		SOIL_FLAG_INVERT_Y
-		);
- 
-	if(door->texture[0] == 0)
+	if(!(door->texture[0] = LoadTexture("Assets/Door.bmp")))
 		printf("Texture not found");
 
 	// Typical Texture Generation Using Data From The Bitmap
@@ -180,10 +176,14 @@ void LoadRegion(const char* regionName)
 
 	fp.close();
 	lastRegion = temper;
-	if(!LoadGLTextures())                          // Jump To Texture Loading Routine ( NEW )
-    {
-        printf("Textures failed to load");
-    }
+
+    /* load an image file directly as a new OpenGL texture */
+	if(!(basetileTex = LoadTexture(tileImage.c_str())))
+		printf("Texture not found");
+	if(!(doorTex = LoadTexture(doorImage.c_str())))
+		printf("Texture not found");
+	if(!(backgroundTex = LoadTexture(backgroundImage.c_str())))
+		printf("Texture not found");
 }
 
 void FreeCurrentRegion(void)

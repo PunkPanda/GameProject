@@ -5,14 +5,12 @@
 
 #include "Player.h"
 #include "Region.h"
-#include "Collision.h"
+#include "Combat.h"
 
 HGLRC           hRC=NULL;                           // Permanent Rendering Context
 HDC             hDC=NULL;                           // Private GDI Device Context
 HWND            hWnd=NULL;                          // Holds Our Window Handle
 HINSTANCE       hInstance;                          // Holds The Instance Of The Application
-
-GLuint      texture[3];                         // Storage For One Texture ( NEW )
 
 bool		fullscreen;
 
@@ -215,90 +213,62 @@ GLvoid ReSizeGLScene(GLsizei width, GLsizei height)					// Resize And Initialize
     glLoadIdentity();								// Reset The Modelview Matrix
 }
 
-int LoadGLTextures()                                    // Load Bitmaps And Convert To Textures
+GLuint LoadTexture(const char* tex)
 {
-    /* load an image file directly as a new OpenGL texture */
-    texture[0] = SOIL_load_OGL_texture
-        (
-        tileImage.c_str(),
-        SOIL_LOAD_AUTO,
-        SOIL_CREATE_NEW_ID,
-        SOIL_FLAG_INVERT_Y
-        );
-     texture[1] = SOIL_load_OGL_texture
-        (
-        backgroundImage.c_str(),
-        SOIL_LOAD_AUTO,
-        SOIL_CREATE_NEW_ID,
-        SOIL_FLAG_INVERT_Y
-        );
-	 texture[2] = SOIL_load_OGL_texture
-        (
-        doorImage.c_str(),
-        SOIL_LOAD_AUTO,
-        SOIL_CREATE_NEW_ID,
-        SOIL_FLAG_INVERT_Y
-        );
-    if(texture[0] == 0 || texture[1] == 0 || texture[2] == 0)
-        return false;
- 
- 
-    // Typical Texture Generation Using Data From The Bitmap
-    glBindTexture(GL_TEXTURE_2D, texture[0]);
-	glBindTexture(GL_TEXTURE_2D, texture[1]);
-	glBindTexture(GL_TEXTURE_2D, texture[2]);
-    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
- 
-    return true;                                        // Return Success
+	return SOIL_load_OGL_texture
+		   (
+		   	   tex,
+		   	   SOIL_LOAD_AUTO,
+		   	   SOIL_CREATE_NEW_ID,
+		   	   SOIL_FLAG_INVERT_Y
+		   );
+
+	/*remember that these functions exist*/
+    //glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
+    //glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
 }
 
 int InitGL(GLvoid)                              // All Setup For OpenGL Goes Here
 {
-    /*if (!LoadGLTextures())                          // Jump To Texture Loading Routine ( NEW )
-    {
-        return FALSE;                           // If Texture Didn't Load Return FALSE ( NEW )
-    }*/
- 
     glEnable(GL_TEXTURE_2D);                        // Enable Texture Mapping ( NEW )
     glShadeModel(GL_SMOOTH);                        // Enable Smooth Shading
-    glClearColor(0.12f, 0.4f, 0.6f, 0.5f);                   // Black Background
-    glClearDepth(1.0f);                         // Depth Buffer Setup
-    glEnable(GL_DEPTH_TEST);                        // Enables Depth Testing
-    glDepthFunc(GL_LEQUAL);                         // The Type Of Depth Testing To Do
+    glClearColor(0.12f, 0.4f, 0.6f, 0.5f);				// Black Background
+    glClearDepth(1.0f);									// Depth Buffer Setup
+    glEnable(GL_DEPTH_TEST);							// Enables Depth Testing
+    glDepthFunc(GL_LEQUAL);								// The Type Of Depth Testing To Do
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);          // Really Nice Perspective Calculations
-    return TRUE;                                // Initialization Went OK
+    return TRUE;												// Initialization Went OK
 }
 
 
 int DrawGLScene(GLvoid)                             // Here's Where We Do All The Drawing
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);         // Clear Screen And Depth Buffer
-    glLoadIdentity();                           // Reset The Current Matrix
+    glLoadIdentity();											// Reset The Current Matrix
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_BLEND);
 	x = -regionWidth/2.0f;
 	y = -regionHeight/2.0f;
-    glTranslatef(-P1->pos.x, -P1->pos.y, z-25.0f);                      // Move Into The Screen 5 Units
+    glTranslatef(-P1->pos.x, -P1->pos.y, z-25.0f);              // Move Into The Screen 5 Units
 
 	glRotatef(xrot,1.0f,0.0f,0.0f);                     // Rotate On The X Axis
 	glRotatef(yrot,0.0f,1.0f,0.0f);                     // Rotate On The Y Axis
 	glRotatef(zrot,0.0f,0.0f,1.0f);                     // Rotate On The Z Axis
 
 	//draw the background
-	glBindTexture(GL_TEXTURE_2D, texture[1]);               // Select Our Texture
+	glBindTexture(GL_TEXTURE_2D, backgroundTex);               // Select Our Texture
 	glBegin(GL_QUADS);
 		glColor3f(1.0f, 1.0f, 1.0f);
-		glTexCoord2f(0.0f, 0.0f); glVertex3f(0, 0, -0.002f);  // Bottom Left Of The Texture and Quad
+		glTexCoord2f(0.0f, 0.0f); glVertex3f(0, 0, -0.002f);	// Bottom Left Of The Texture and Quad
 		glTexCoord2f(1.0f, 0.0f); glVertex3f(100, 0, -0.002f);  // Bottom Right Of The Texture and Quad
-		glTexCoord2f(1.0f, 1.0f); glVertex3f(100, 30, -0.002f);  // Top Right Of The Texture and Quad
-		glTexCoord2f(0.0f, 1.0f); glVertex3f(0, 30, -0.002f);  // Top Left Of The Texture and Quad
+		glTexCoord2f(1.0f, 1.0f); glVertex3f(100, 30, -0.002f); // Top Right Of The Texture and Quad
+		glTexCoord2f(0.0f, 1.0f); glVertex3f(0, 30, -0.002f);	// Top Left Of The Texture and Quad
 	glEnd();
 
 	//draw each tile
 	for(short i = 0; i < regionWidth; ++i)
 	{
-		if(abs(i - P1->pos.x) > 18)
+		if(abs(i - P1->pos.x) > 18)				//hardcoded culling, distance from player
 			continue;
 		for(short j = 0; j < regionHeight; ++j)
 		{
@@ -309,7 +279,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 				case ' ':
 					break;
 				case '-':
-					glBindTexture(GL_TEXTURE_2D, texture[0]);               // Select Our Texture
+					glBindTexture(GL_TEXTURE_2D, basetileTex);               // Select Our Texture
 					glBegin(GL_QUADS);
 						glColor3f(1.0f, 1.0f, 1.0f);
 						glTexCoord2f(0.0f, 0.0f); glVertex2f(i, j);  // Bottom Left Of The Texture and Quad
@@ -319,7 +289,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 					glEnd();
 					break;
 				case '<':
-					glBindTexture(GL_TEXTURE_2D, texture[0]);               // Select Our Texture
+					glBindTexture(GL_TEXTURE_2D, basetileTex);               // Select Our Texture
 					glBegin(GL_TRIANGLES);
 						glColor3f(1.0f, 1.0f, 1.0f);
 						glTexCoord2f(0.0f, 0.0f); glVertex2f(i, j);  // Bottom Left Of The Texture and Quad
@@ -328,7 +298,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 					glEnd();
 					break;
 				case '>':
-					glBindTexture(GL_TEXTURE_2D, texture[0]);               // Select Our Texture
+					glBindTexture(GL_TEXTURE_2D, basetileTex);               // Select Our Texture
 					glBegin(GL_TRIANGLES);
 						glColor3f(1.0f, 1.0f, 1.0f);
 						glTexCoord2f(0.0f, 0.0f); glVertex2f(i, j);  // Bottom Left Of The Texture and Quad
@@ -339,7 +309,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 				case '1': 
 					if(!door1)
 					{
-						glBindTexture(GL_TEXTURE_2D, texture[2]); 
+						glBindTexture(GL_TEXTURE_2D, doorTex); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
 							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
@@ -353,7 +323,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 				case '2':
 					if(!door2)
 					{
-						glBindTexture(GL_TEXTURE_2D, texture[2]); 
+						glBindTexture(GL_TEXTURE_2D, doorTex); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
 							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
@@ -367,7 +337,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 				case '3': 
 					if(!door3)
 					{
-						glBindTexture(GL_TEXTURE_2D, texture[2]); 
+						glBindTexture(GL_TEXTURE_2D, doorTex); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
 							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad
@@ -381,7 +351,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 				case '4':
 					if(!door4)
 					{
-						glBindTexture(GL_TEXTURE_2D, texture[2]); 
+						glBindTexture(GL_TEXTURE_2D, doorTex); 
 						glBegin(GL_QUADS);
 							glColor3f(1.0f, 1.0f, 1.0f);
 							glTexCoord2f(0.0f, 0.0f); glVertex3f(i, j, -0.001f);  // Bottom Left Of The Texture and Quad

@@ -16,6 +16,7 @@ int DrawGLScene(GLvoid);
 GLvoid KillGLWindow(GLvoid);
 bool GraphicsInit(void);
 void GraphicsUpdate(void);
+GLuint LoadTexture(const char* tex);
 
 extern bool    fullscreen;                            // Fullscreen Flag Set To Fullscreen Mode By Default
 

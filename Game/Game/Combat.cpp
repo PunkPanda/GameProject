@@ -1,4 +1,4 @@
-#include "Collision.h"
+#include "Combat.h"
 #include "Doods.h"
 
 std::vector<Hitbox*> hitboxes;

@@ -1,5 +1,5 @@
 #include "Player.h"
-#include "Collision.h"
+#include "Combat.h"
 
 Player* P1;
 
@@ -16,19 +16,8 @@ void createPlayer(Point p, Point r, float w, float h, Vector rgb, bool s)
 	hurtboxes.push_back(hurt);
 
     /* load an image file directly as a new OpenGL texture */
-    P1->texture[0] = SOIL_load_OGL_texture
-        (
-        "Assets/Weechan.jpg",
-        SOIL_LOAD_AUTO,
-        SOIL_CREATE_NEW_ID,
-        SOIL_FLAG_INVERT_Y
-        );
- 
-    if(P1->texture[0] == 0)
-        printf("Texture not found");
-
-    // Typical Texture Generation Using Data From The Bitmap
-	glBindTexture(GL_TEXTURE_2D, P1->texture[0]);
+	if(!(P1->texture[0] = LoadTexture("Assets/Weechan.jpg")))
+		printf("Texture not found");
 
 	//put Player into the doodlist
 	bool assigned = false;

@@ -2,15 +2,9 @@
 #include "Point.h"
 #include "Vector.h"
 
+
 #include <Windows.h>
-#ifndef GL_H
-	#define GL_H
-	#include <gl\gl.h>                                // Header File For The OpenGL32 Library
-	#include <gl\glu.h>                               // Header File For The GLu32 Library
-	#include <gl\freeglut.h>
-	#include "BMP.h"								  // Header File For The BMP Library
-	#include "SOIL.h"
-#endif
+#include "Graphics.h"
 
 #include <list>
 #include <vector>

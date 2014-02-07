@@ -1,5 +1,5 @@
 #include "Doods.h"
-#include "Collision.h"
+#include "Combat.h"
 
 std::list<Dood*> doods;
 
@@ -13,7 +13,7 @@ void DoodsUpdate(void)
 			(*it)->hitbox->pos = (*it)->pos;
 			(*it)->hitbox->pos.x += 1.0f;
 
-			//all of this is very bad, only to see if i can make this work, this needs to be changed, BADLY, no coherence for a suitable future code base
+			//all of this is very bad, only to see if i can make this work, this needs to be changed, BADLY
 			if((*it)->hitbox->lifetime <= 0)
 			{
 				delete (*it)->hitbox;

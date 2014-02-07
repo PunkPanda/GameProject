@@ -64,7 +64,7 @@
   <ItemGroup>
     <ClCompile Include="AI.cpp" />
     <ClCompile Include="BMP.cpp" />
-    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Combat.cpp" />
     <ClCompile Include="DebugConsole.cpp" />
     <ClCompile Include="Doods.cpp" />
     <ClCompile Include="Graphics.cpp" />
@@ -85,7 +85,7 @@
     <ClInclude Include="DebugConsole.h" />
     <ClInclude Include="Doods.h" />
     <ClInclude Include="Graphics.h" />
-    <ClInclude Include="Collision.h" />
+    <ClInclude Include="Combat.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Physics.h" />

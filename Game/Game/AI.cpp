@@ -1,7 +1,7 @@
 #include "AI.h"
 #include "Player.h"
 #include "Physics.h"
-#include "Collision.h"
+#include "Combat.h"
 
 std::list<AI*> AIlist;
 
@@ -21,15 +21,7 @@ void createAI(Point p, Point r, float w, float h, Vector rgb, enum AI::Type t)
 		case AI::STANDARD:
 		{
 			/* load an image file directly as a new OpenGL texture */
-			ai->texture[0] = SOIL_load_OGL_texture
-				(
-				"Assets/img_test.bmp",
-				SOIL_LOAD_AUTO,
-				SOIL_CREATE_NEW_ID,
-				SOIL_FLAG_INVERT_Y
-				);
- 
-			if(ai->texture[0] == 0)
+			if(!(ai->texture[0] = LoadTexture("Assets/img_test.bmp")))
 				printf("Texture not found");
 
 			break;
@@ -37,22 +29,12 @@ void createAI(Point p, Point r, float w, float h, Vector rgb, enum AI::Type t)
 		case AI::JUMPER:
 		{
 			/* load an image file directly as a new OpenGL texture */
-			ai->texture[0] = SOIL_load_OGL_texture
-				(
-				"Assets/Spoink.png",
-				SOIL_LOAD_AUTO,
-				SOIL_CREATE_NEW_ID,
-				SOIL_FLAG_INVERT_Y
-				);
- 
-			if(ai->texture[0] == 0)
+			if(!(ai->texture[0] = LoadTexture("Assets/Spoink.png")))
 				printf("Texture not found");
-
+				
 			break;
 		}
 	}
-	// Typical Texture Generation Using Data From The Bitmap
-	glBindTexture(GL_TEXTURE_2D, ai->texture[0]);
 
 	/*//put AI into the object list
 	bool assigned = false;

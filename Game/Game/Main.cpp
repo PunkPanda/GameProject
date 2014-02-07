@@ -8,7 +8,7 @@
 #include "Player.h"
 #include "AI.h"
 #include "Region.h"
-#include "Collision.h"
+#include "Combat.h"
 
 int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 					HINSTANCE   hPrevInstance,       // Previous Instance
