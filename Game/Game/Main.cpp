@@ -10,6 +10,10 @@
 #include "Region.h"
 #include "Combat.h"
 
+#include <time.h>
+double frametime;
+unsigned frames;
+
 int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 					HINSTANCE   hPrevInstance,       // Previous Instance
 					LPSTR       lpCmdLine,           // Command Line Parameters
@@ -68,16 +72,24 @@ int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 				KillGLWindow();                 // Kill our current window
 				fullscreen=!fullscreen;         // Toggle fullscreen / windowed mode
 					// Recreate Our OpenGL Window
-				if (!CreateGLWindow("Adventures of Weechan",640,480,16,fullscreen))
+				if (!CreateGLWindow("Adventures of Weechan", 640, 480, 16, fullscreen))
 				{
 					return 0; // Quit if window was not created
 				}
 			}
 		}
+
+		if((timeGetTime() - 1000) >= frametime)
+		{
+			printf("%i\n", frames);
+			frames = 0;
+			frametime = timeGetTime();
+		}
+		++frames;
 	}
 	RemoveConsole();
 
-		// Shutdown
-  KillGLWindow();      // Kill The Window
-  return (msg.wParam); // Exit The Program
+	// Shutdown
+	KillGLWindow();      // Kill The Window
+	return (msg.wParam); // Exit The Program
 }
