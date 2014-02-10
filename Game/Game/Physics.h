@@ -9,8 +9,8 @@ bool MapCollision(Object* obj);
 void ApplyGravity(Object* obj);
 void ApplyFriction(Object* obj);
 int GridCollision(Point pos, float width, float height);
-void SnapUp(float& Coordinate, float scale);
-void SnapDown(float& Coordinate, float scale);
+void SnapUp(float& Coordinate);
+void SnapDown(float& Coordinate);
 void RampSnapUpRight(Point& Coordinate, float width, float height);
 void RampSnapUpLeft(Point& Coordinate, float width, float height);
 

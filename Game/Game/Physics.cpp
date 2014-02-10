@@ -21,17 +21,16 @@ void PhysicsUpdate(void)
 		if((*it)->Static)
 			continue;
 
-		//returns a bool indicating whether or not to apply gravity
+		ApplyGravity(*it);
+
+		//apply velocity
+		(*it)->pos += (*it)->vel;
+
+		//returns a bool indicating whether or not to apply friction for floor contact
 		if(MapCollision(*it))
-		{
-			ApplyGravity(*it);
-		}
-		else	//apply friction if contacting the floor
 		{
 			ApplyFriction(*it);
 		}
-		//apply velocity
-		(*it)->pos += (*it)->vel;
 	}
 }
 
@@ -43,59 +42,58 @@ bool MapCollision(Object* obj)
 	{
 		RampSnapUpRight(obj->pos, obj->width, obj->height);
 		obj->vel.y = 0;
-		return false;
+		return true;
 	}
 	else if(obj->gridCollision & COLLISION_RAMP_LEFT)
 	{
 		RampSnapUpLeft(obj->pos, obj->width, obj->height);
 		obj->vel.y = 0;
-		return false;
+		return true;
 	}
 	else
 	{
 		if(obj->gridCollision & COLLISION_LEFT)
 		{
-			SnapUp(obj->pos.x, obj->width);
+			SnapUp(obj->pos.x);
 			obj->vel.x = 0;
 		}
 		if(obj->gridCollision & COLLISION_RIGHT)
 		{
-			SnapDown(obj->pos.x, obj->width);
+			SnapDown(obj->pos.x);
 			obj->vel.x = 0;
 		}
 		if(obj->gridCollision & COLLISION_TOP)
 		{
-			SnapDown(obj->pos.y, obj->height);
+			SnapDown(obj->pos.y);
 			obj->vel.y = 0;
 		}
 		if(obj->gridCollision & COLLISION_BOTTOM)
 		{
-			SnapUp(obj->pos.y, obj->height);
+			SnapUp(obj->pos.y);
 			obj->vel.y = 0;
-			return false;
+			return true;
 		}
 	}
-	return true;
+	return false;
 }
 
 void ApplyGravity(Object* obj)
 {
-	if(abs(obj->vel.y < 0.5))
-		obj->vel.y -= 0.00001f; //replace this later
+	obj->vel.y -= 0.05f; //replace this later
 }
 
 void ApplyFriction(Object* obj)
 {
 	if(obj->vel.x > 0)
 	{
-		obj->vel.x -= 0.00002f;
-		if(obj->vel.x < 0.00002f)
+		obj->vel.x -= 0.1f;
+		if(obj->vel.x < 0.1f)
 			obj->vel.x = 0;
 	}
 	else if(obj->vel.x < 0)
 	{
-		obj->vel.x += 0.00002f;
-		if(obj->vel.x > -0.00002f)
+		obj->vel.x += 0.1f;
+		if(obj->vel.x > -0.1f)
 			obj->vel.x = 0;
 	}
 }
@@ -109,16 +107,18 @@ int GridCollision(Point pos, float width, float height)
 	int flag = 0;//set flag
 
 	//set hotspots
-	Point topL(pos.x - width/4, pos.y + height/2);
-	Point topR(pos.x + width/4, pos.y + height/2);
-	Point rightT(pos.x + width/2, pos.y + height/4);
-	Point rightB(pos.x + width/2, pos.y - height/4);
-	Point leftT(pos.x - width/2, pos.y + height/4);
-	Point leftB(pos.x - width/2, pos.y - height/4);
-	Point bottomL(pos.x - width/4, pos.y - height/2);
-	Point bottomR(pos.x + width/4, pos.y - height/2);
-	Point midL(pos.x - width/2, pos.y);
-	Point midR(pos.x + width/2, pos.y);
+	Point topL(pos.x + width/4, pos.y + height);
+	Point topR(pos.x + 3*width/4, pos.y + height);
+	Point rightT(pos.x + width, pos.y + 3*height/4);
+	Point rightB(pos.x + width, pos.y + height/4);
+	Point leftT(pos.x, pos.y + 3*height/4);
+	Point leftB(pos.x, pos.y + height/4);
+	Point bottomL(pos.x + width/4, pos.y);
+	Point bottomR(pos.x + 3*width/4, pos.y);
+	Point midL(pos.x, pos.y + height/2);
+	Point midR(pos.x + width, pos.y + height/2);
+	Point rampR(pos.x + 3*width/4, pos.y + width/4);
+	Point rampL(pos.x + width/4, pos.y + width/4);
 	
 	if(currentRegion[(int)topL.x][(int)topL.y] == '-' || currentRegion[(int)topR.x][(int)topR.y] == '-' )//if on top
 	{
@@ -143,11 +143,11 @@ int GridCollision(Point pos, float width, float height)
 	}
 
 	//going up or down ramps
-	if(currentRegion[(int)bottomR.x][(int)bottomR.y] == '<')
+	if(currentRegion[(int)rampR.x][(int)rampR.y] == '<')
 	{
 		flag += COLLISION_RAMP_RIGHT;
 	}
-	else if(currentRegion[(int)bottomL.x][(int)bottomL.y] == '>')
+	else if(currentRegion[(int)rampL.x][(int)rampL.y] == '>')
 	{
 		flag += COLLISION_RAMP_LEFT;
 	}
@@ -173,30 +173,23 @@ int GridCollision(Point pos, float width, float height)
 	return flag;
 }
 
-void SnapUp(float& Coordinate, float scale)
+void SnapUp(float& Coordinate)
 {
-	Coordinate += (int((Coordinate - scale/2) + 1) - (Coordinate - scale/2) + .0001f);//convert to int
+	Coordinate = (int)Coordinate + 1;
 }
 
-void SnapDown(float& Coordinate, float scale)
+void SnapDown(float& Coordinate)
 {
-	Coordinate -= ((Coordinate + scale/2) - int(Coordinate + scale/2) + .0001f);//convert to int
+	Coordinate = (int)Coordinate;//convert to int
 }
 
 void RampSnapUpRight(Point& Coordinate, float width, float height)
 {
-	Coordinate.y -= height/2;		//translate down to the corner
-	Coordinate.x += width/4;
-	Coordinate.y = (int(Coordinate.y) + ((Coordinate.x) - int(Coordinate.x)));  //move y up equal to distance into the block we are
-	Coordinate.y += height/2;
-	Coordinate.x -= width/4;
+	Coordinate.y = (int)Coordinate.y + 1;
+	Coordinate.y +=  (Coordinate.x - (int)Coordinate.x - width/4 - height/4);  //move y up equal to distance into the block we are
 }
 //opposite of above
 void RampSnapUpLeft(Point& Coordinate, float width, float height)
 {
-	Coordinate.y -= height/2;
-	Coordinate.x -= width/4;
 	Coordinate.y = (int(Coordinate.y) + 1) - ((Coordinate.x) - int(Coordinate.x));
-	Coordinate.y += height/2;
-	Coordinate.x += width/4;
 }

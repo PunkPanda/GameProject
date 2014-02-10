@@ -14,13 +14,12 @@
 
 #define FRAMERATE 16.6666667
 
-double frametime;
+DWORD frametime;
 unsigned frames;
 
-float controlFrameRate = 1./60;
-float frameTime = 0;
-float lastTime = 0;
-float elapsedTime;
+DWORD frameTime = 0;
+DWORD lastTime = 0;
+DWORD elapsedTime;
 
 int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 					HINSTANCE   hPrevInstance,       // Previous Instance
@@ -66,17 +65,17 @@ int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 				{
 					lastTime = timeGetTime();
 
-					GraphicsUpdate();
 					InputUpdate();
 					AIUpdate();
 					DoodsUpdate();
 					CollisionUpdate();
 					PhysicsUpdate();
+					GraphicsUpdate();
 
 					frameTime = timeGetTime();
 					elapsedTime = frameTime - lastTime;
 
-					if (elapsedTime < FRAMERATE)
+					if(elapsedTime < FRAMERATE)
 					{
 						Sleep(FRAMERATE - elapsedTime);
 					}
