@@ -117,8 +117,8 @@ int GridCollision(Point pos, float width, float height)
 	Point bottomR(pos.x + 3*width/4, pos.y);
 	Point midL(pos.x, pos.y + height/2);
 	Point midR(pos.x + width, pos.y + height/2);
-	Point rampR(pos.x + 3*width/4, pos.y + width/4);
-	Point rampL(pos.x + width/4, pos.y + width/4);
+	Point rampR(pos.x + width, pos.y);
+	Point rampL(pos.x, pos.y);
 	
 	if(currentRegion[(int)topL.x][(int)topL.y] == '-' || currentRegion[(int)topR.x][(int)topR.y] == '-' )//if on top
 	{
@@ -142,7 +142,7 @@ int GridCollision(Point pos, float width, float height)
 		flag += COLLISION_BUMP;
 	}
 
-	//going up or down ramps
+	//going up or down ramps 
 	if(currentRegion[(int)rampR.x][(int)rampR.y] == '<')
 	{
 		flag += COLLISION_RAMP_RIGHT;
@@ -186,7 +186,7 @@ void SnapDown(float& Coordinate)
 void RampSnapUpRight(Point& Coordinate, float width, float height)
 {
 	Coordinate.y = (int)Coordinate.y + 1;
-	Coordinate.y +=  (Coordinate.x - (int)Coordinate.x - width/4 - height/4);  //move y up equal to distance into the block we are
+	Coordinate.y +=  int(Coordinate.x + 1) - Coordinate.x;  //move y up equal to distance into the block we are
 }
 //opposite of above
 void RampSnapUpLeft(Point& Coordinate, float width, float height)

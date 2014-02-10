@@ -406,7 +406,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 
 	//hurtbox/hitbox visualization
 	//disable texturing and set polygon mode to draw outlines
-	glDisable(GL_TEXTURE_2D);
+	/*glDisable(GL_TEXTURE_2D);
 	glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
 	for(std::vector<Hurtbox*>::iterator it = hurtboxes.begin(); it != hurtboxes.end(); ++it)
 	{
@@ -436,7 +436,7 @@ int DrawGLScene(GLvoid)                             // Here's Where We Do All Th
 	}
 
 	glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
-	glEnable(GL_TEXTURE_2D);                        // reEnable Texture Mapping
+	glEnable(GL_TEXTURE_2D);                        // reEnable Texture Mapping*/
 
 	door1 = false;
 	door2 = false;
