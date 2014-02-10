@@ -80,7 +80,6 @@ void InputUpdate(void)
 				if(!(P1->gridCollision & COLLISION_BUMP))
 				{
 					P1->height = P1->standHeight;
-					P1->pos.y += (P1->standHeight - P1->crouchHeight)/2;
 					P1->orientation = P1->STANDING;
 				}
 				break;
@@ -91,7 +90,6 @@ void InputUpdate(void)
 				{
 					P1->height = P1->crouchHeight;
 					P1->width = P1->standWidth;
-					P1->pos.y += (P1->crouchHeight - P1->crawlHeight)/2;
 					P1->orientation = P1->CROUCHING;
 				}
 				break;
@@ -105,14 +103,12 @@ void InputUpdate(void)
 		if(P1->orientation == P1->STANDING)
 		{
 			P1->height = P1->crouchHeight;
-			P1->pos.y -= (P1->standHeight - P1->crouchHeight)/2;
 			P1->orientation = P1->CROUCHING;
 		}
 		else if(P1->orientation == P1->CROUCHING)
 		{
 			P1->height = P1->crawlHeight;
 			P1->width = P1->crawlWidth;
-			P1->pos.y -= (P1->crouchHeight - P1->crawlHeight)/2;
 			P1->orientation = P1->CRAWLING;
 		}
 	}
