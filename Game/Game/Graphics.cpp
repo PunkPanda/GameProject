@@ -27,6 +27,12 @@ bool door2;
 bool door3;
 bool door4;
 
+#define FRAMERATE 16.6666667
+
+DWORD frameTime = 0;
+DWORD lastTime = 0;
+DWORD elapsedTime;
+
 BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscreenflag)
 {
 	GLuint      PixelFormat;                        // Holds The Results After Searching For A Match
@@ -500,6 +506,17 @@ bool GraphicsInit(void)
 
 void GraphicsUpdate(void)
 {
+	lastTime = timeGetTime();
+
 	DrawGLScene();              // Draw The Scene
+	
+	frameTime = timeGetTime();
+	elapsedTime = frameTime - lastTime;
+
+	if(elapsedTime < FRAMERATE)
+	{
+		Sleep(FRAMERATE - elapsedTime);		
+	}
+
 	SwapBuffers(hDC);           // Swap Buffers (Double Buffering)
 }

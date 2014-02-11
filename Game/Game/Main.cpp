@@ -12,14 +12,8 @@
 
 #include <time.h>
 
-#define FRAMERATE 16.6666667
-
 DWORD frametime;
 unsigned frames;
-
-DWORD frameTime = 0;
-DWORD lastTime = 0;
-DWORD elapsedTime;
 
 int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 					HINSTANCE   hPrevInstance,       // Previous Instance
@@ -63,22 +57,12 @@ int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 				}
 				else             // Not time to quit, update screen
 				{
-					lastTime = timeGetTime();
-
 					InputUpdate();
 					AIUpdate();
 					DoodsUpdate();
 					CollisionUpdate();
 					PhysicsUpdate();
 					GraphicsUpdate();
-
-					frameTime = timeGetTime();
-					elapsedTime = frameTime - lastTime;
-
-					if(elapsedTime < FRAMERATE)
-					{
-						Sleep(FRAMERATE - elapsedTime);
-					}
 				}
 			}
 
