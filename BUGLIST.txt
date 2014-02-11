@@ -1,3 +1,3 @@
-Physics are fucked - forces are too powerful, can clip through walls and cling by holding run against a wall, go through ceiling, etc.
+Physics are fucked - can cling by holding run against a wall, go through ceiling, etc.
 Ramps don't work
-Inconsistent framerate even with controller
+access violation if player is partially out of the region

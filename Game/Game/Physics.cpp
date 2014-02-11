@@ -79,7 +79,8 @@ bool MapCollision(Object* obj)
 
 void ApplyGravity(Object* obj)
 {
-	obj->vel.y -= 0.05f; //replace this later
+	if(obj->vel.y > - 1.0f)
+		obj->vel.y -= 0.025f; //replace this later
 }
 
 void ApplyFriction(Object* obj)
@@ -107,14 +108,14 @@ int GridCollision(Point pos, float width, float height)
 	int flag = 0;//set flag
 
 	//set hotspots
-	Point topL(pos.x + width/4, pos.y + height);
-	Point topR(pos.x + 3*width/4, pos.y + height);
-	Point rightT(pos.x + width, pos.y + 3*height/4);
-	Point rightB(pos.x + width, pos.y + height/4);
-	Point leftT(pos.x, pos.y + 3*height/4);
-	Point leftB(pos.x, pos.y + height/4);
-	Point bottomL(pos.x + width/4, pos.y);
-	Point bottomR(pos.x + 3*width/4, pos.y);
+	Point topL(pos.x + width/5, pos.y + height);
+	Point topR(pos.x + 4*width/5, pos.y + height);
+	Point rightT(pos.x + width, pos.y + 4*height/5);
+	Point rightB(pos.x + width, pos.y + height/5);
+	Point leftT(pos.x, pos.y + 4*height/5);
+	Point leftB(pos.x, pos.y + height/5);
+	Point bottomL(pos.x + width/5, pos.y);
+	Point bottomR(pos.x + 4*width/5, pos.y);
 	Point midL(pos.x, pos.y + height/2);
 	Point midR(pos.x + width, pos.y + height/2);
 	Point rampR(pos.x + width, pos.y);
@@ -175,7 +176,7 @@ int GridCollision(Point pos, float width, float height)
 
 void SnapUp(float& Coordinate)
 {
-	Coordinate = (int)Coordinate + 1;
+	Coordinate = int(Coordinate + 1);
 }
 
 void SnapDown(float& Coordinate)
@@ -185,11 +186,11 @@ void SnapDown(float& Coordinate)
 
 void RampSnapUpRight(Point& Coordinate, float width, float height)
 {
-	Coordinate.y = (int)Coordinate.y + 1;
+	Coordinate.y = int(Coordinate.y + 1);
 	Coordinate.y +=  int(Coordinate.x + 1) - Coordinate.x;  //move y up equal to distance into the block we are
 }
 //opposite of above
 void RampSnapUpLeft(Point& Coordinate, float width, float height)
 {
-	Coordinate.y = (int(Coordinate.y) + 1) - ((Coordinate.x) - int(Coordinate.x));
+	Coordinate.y = int(Coordinate.y + 1) - (Coordinate.x - int(Coordinate.x));
 }

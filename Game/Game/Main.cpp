@@ -52,7 +52,7 @@ int WINAPI WinMain( HINSTANCE   hInstance, // Instance
 				DispatchMessage(&msg);  // Dispatch the message
 			}
 		}
-		else                        // If there are no messages
+		//else                        // If there are no messages
 		{
 				// Draw the scene.  Watch for ESC Key and quit messages from DrawGLScene()
 			if (active) // Program active?

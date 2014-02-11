@@ -13,7 +13,7 @@ class Dood: public Object
 	public:
 		Dood(Point p, Point r, float w, float h, Vector rgb, bool s, int health) : Object(p, r, w, h, rgb, s, DOOD), damage(0), hp(health), alive(true), hitbox(NULL),
 		crouchHeight(3.0f), standHeight(h), standWidth(w), crawlHeight(standHeight/4.0f), crawlWidth(h), walkSpeed(0.2f), runSpeed(0.5f), currentSpeed(runSpeed), maxSpeed(runSpeed*2), 
-		jumpHeight(0.7f), bumpFlag(false)
+		jumpHeight(0.6f), bumpFlag(false)
 		{
 		};
 
