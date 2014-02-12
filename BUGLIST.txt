@@ -1,4 +1,0 @@
-Physics are fucked - can cling by holding run against a wall, go through ceiling, etc.
-Ramps don't work
-access violation if player is partially out of the region
-inconsistent framerate
