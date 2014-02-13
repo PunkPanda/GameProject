@@ -22,10 +22,24 @@ public class PlayerControl : MonoBehaviour
     groundCheck = transform.Find("groundCheck");
   }
 
+  void OnCollisionStay2D(Collision2D col)
+  {
+    Debug.Log("stay");
+    if(col.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")))
+    grounded = true;
+  }
+
+  void OnCollisionExit2D(Collision2D col)
+  {
+    Debug.Log("exit");
+    if(col.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")))
+      grounded = false;
+  }
+
 		// Update is called once per frame
   void Update () 
   {
-    grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+    //grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
     
     if (Input.GetButtonDown("Jump") && grounded)
     {
