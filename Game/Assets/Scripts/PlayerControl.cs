@@ -3,55 +3,84 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour 
 {
-  public float maxVelocity = 10f;
-  public float maxSprint = 15f;
-  public float sprintBoost = 1.5f;
+  public float maxVelocity = 15f; // Max velocity when not sprinting
+  public float maxSprint = 25f;   // Max velocity when sprinting
+  public float sprintBoost = 2f;  // Boost multiplier sprinting gives
+  public float jumpForce = 1f;    // Jump height/force
+  public float airSlow = .75f;    // Horizontal velocity is multiplied by this when jumping
+  
+  private Transform groundCheck;   // Position to check if grounded
+
+  public bool grounded = false;
+  public bool jump = false;
+  public bool sprint = false;
+
+  void Awake()
+  {
+    // Setting up references.
+    groundCheck = transform.Find("groundCheck");
+  }
 
 		// Update is called once per frame
-	void Update () 
-	{
-
-	}
+  void Update () 
+  {
+    grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+    
+    if (Input.GetButtonDown("Jump") && grounded)
+    {
+      jump = true;
+    }
+    
+    sprint = Input.GetButton ("Sprint");     // Value of sprint key input
+  }
 
   void FixedUpdate()
   {
     float h = Input.GetAxis ("Horizontal"); // Value of horizontal movement input
-    float s = Input.GetAxis ("Sprint");     // Value of sprint key input
 
-    if (s > 0) 
+    if (sprint && grounded) 
     {
-      Debug.Log("Sprinting");
-
         // Move player (sprint)
       if (h * rigidbody2D.velocity.x < maxSprint)
       {
+        Debug.Log("Sprinting");
         rigidbody2D.velocity += Vector2.right * (h * sprintBoost);
       }
 
       if (Mathf.Abs (rigidbody2D.velocity.x) > maxSprint) 
       {
+        Debug.Log("Max sprint");
         rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxVelocity, rigidbody2D.velocity.y);
       }
     }
-    else 
+    else if (grounded)
     {
-      Debug.Log("Not sprinting");
-
-        // Move player (no sprint)
+      // Move player (no sprint)
       if (h * rigidbody2D.velocity.x < maxVelocity) 
       {
+        Debug.Log("Not sprinting");
         rigidbody2D.velocity += Vector2.right * h;
       }
 
       if (Mathf.Abs (rigidbody2D.velocity.x) > maxVelocity) 
       {
+        Debug.Log("Max velocity");
         rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxVelocity, rigidbody2D.velocity.y);
       }
     }
 
-    if (Mathf.Abs(h) < 1) 
+    if (Mathf.Abs(h) < 1 && grounded) 
     {
       rigidbody2D.velocity = new Vector2 (0, rigidbody2D.velocity.y);
+    }
+    
+    if (jump)
+    {
+      rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+      
+      rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x * airSlow, rigidbody2D.velocity.y);
+      
+      jump = false;
     }
   }
 }
