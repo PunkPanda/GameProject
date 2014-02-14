@@ -33,7 +33,6 @@ public class CharacterController2D : MonoBehaviour
 		public bool below;
 		public bool becameGroundedThisFrame;
 
-
 		public void reset()
 		{
 			right = left = above = below = becameGroundedThisFrame = false;
@@ -50,6 +49,8 @@ public class CharacterController2D : MonoBehaviour
 
 
 	#region properties and fields
+
+    public bool becameAerialThisFrame;
 
 	public event Action<RaycastHit2D> onControllerCollidedEvent;
 
@@ -369,6 +370,11 @@ public class CharacterController2D : MonoBehaviour
 		// set our becameGrounded state based on the previous and current collision state
 		if( !wasGroundedBeforeMoving && collisionState.below )
 			collisionState.becameGroundedThisFrame = true;
+
+        if (wasGroundedBeforeMoving && !collisionState.below)
+            becameAerialThisFrame = true;
+        else
+            becameAerialThisFrame = false;
 	}
 
 }

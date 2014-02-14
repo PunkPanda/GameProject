@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float groundDamping = 20f;
     public float inAirDamping = 5f;
     public float jumpHeight = 3f;
-    
+    public float horizontalAirVel = 0f;
+
     [HideInInspector]
     private float normalizedHorizontalSpeed = 0;
     
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 normalizedHorizontalSpeed = 1;
 
-                    // Flip
+                // Flip
                 if (transform.localScale.x < 0f)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             } 
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 normalizedHorizontalSpeed = -1;
 
-                    // Flip
+                // Flip
                 if (transform.localScale.x > 0f)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             } 
@@ -80,13 +81,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 normalizedHorizontalSpeed = 0;
             }
+        } 
+        else   //Aerial movement
+        {
+            if(_controller.becameAerialThisFrame)
+                horizontalAirVel = normalizedHorizontalSpeed;
+
+            if (h > 0) // Right
+            {
+                normalizedHorizontalSpeed = horizontalAirVel + 0.5f;
+            } 
+            else if (h < 0) // Left
+            {
+                normalizedHorizontalSpeed = horizontalAirVel - 0.5f;
+            } 
         }
 
             // Jump data
         if (jump)
         {
             _velocity.y = Mathf.Sqrt( 2f * jumpHeight * -gravity );
-
             jump = false;
         }
        
@@ -94,13 +108,12 @@ public class PlayerMovement : MonoBehaviour
         var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping;
 
             // Final velocity.x is calculated, sprinting is checked as well
-        if (_controller.isGrounded)
-        {
-            if (!sprint)
-                _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * walkSpeed, Time.deltaTime * smoothedMovementFactor );
-            else
-                _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor );
-        }
+
+        if (sprint && _controller.isGrounded)
+            _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor );
+        else
+            _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * walkSpeed, Time.deltaTime * smoothedMovementFactor );
+
 
             // Gravity is taken care of
         _velocity.y += Time.deltaTime * gravity;
