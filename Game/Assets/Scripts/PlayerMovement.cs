@@ -43,20 +43,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-            // Input
+        // Input
         if (Input.GetButtonDown("Jump") && _controller.isGrounded)
         {
             jump = true;
         }
 
-        sprint = Input.GetButton ("Sprint");
+        sprint = Input.GetButton("Sprint");
  
         float h = Input.GetAxis("Horizontal");
 
-            // Create local velocity to be used in all further calculations
+        // Create local velocity to be used in all further calculations
         _velocity = _controller.velocity;
 
-            // Ground movement
+        // Ground movement
         if (_controller.isGrounded)
         {
             _velocity.y = 0; // On the ground, no need for y
@@ -68,57 +68,95 @@ public class PlayerMovement : MonoBehaviour
                 // Flip
                 if (transform.localScale.x < 0f)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            } 
-            else if (h < 0) // Left
+            } else if (h < 0) // Left
             {
                 normalizedHorizontalSpeed = -1;
 
                 // Flip
                 if (transform.localScale.x > 0f)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            } 
-            else
+            } else
             {
                 normalizedHorizontalSpeed = 0;
             }
-        } 
-        else   //Aerial movement
+        } else   //Aerial movement
         {
-            if(_controller.becameAerialThisFrame)
-                horizontalAirVel = normalizedHorizontalSpeed;
+            if (_controller.becameAerialThisFrame)
+            {
+                if(sprint)
+                    horizontalAirVel = 0.5f * normalizedHorizontalSpeed*2;
+                else
+                    horizontalAirVel = 0.5f * normalizedHorizontalSpeed;
+            }
 
             if (h > 0) // Right
             {
                 normalizedHorizontalSpeed = horizontalAirVel + 0.5f;
-            } 
-            else if (h < 0) // Left
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+                ;
+            } else if (h < 0) // Left
             {
                 normalizedHorizontalSpeed = horizontalAirVel - 0.5f;
-            } 
+            }
+            else
+            {
+                normalizedHorizontalSpeed = horizontalAirVel;
+            }
+            Debug.Log(normalizedHorizontalSpeed);
         }
 
-            // Jump data
+        // Jump data
         if (jump)
         {
-            _velocity.y = Mathf.Sqrt( 2f * jumpHeight * -gravity );
+            _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
             jump = false;
-        }
+        };;;;;;
        
-            // Variables and junk determine movement smoothness
+        // Variables and junk determine movement smoothness
         var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping;
+        ;
+        ;
+        ;
+        ;
 
-            // Final velocity.x is calculated, sprinting is checked as well
-
+        // Final velocity.x is calculated, sprinting is checked as well
+        ;
+        ;
+        ;
+        ;
+        ;;;;;;;
+        ;
         if (sprint && _controller.isGrounded)
-            _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor );
+            _velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor);
         else
-            _velocity.x = Mathf.Lerp( _velocity.x, normalizedHorizontalSpeed * walkSpeed, Time.deltaTime * smoothedMovementFactor );
+            _velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * walkSpeed, Time.deltaTime * smoothedMovementFactor);
 
 
-            // Gravity is taken care of
+        // Gravity is taken care of;;;;;;;;;;;;
         _velocity.y += Time.deltaTime * gravity;
 
-            // Finally, velocity is applied to object
+            // Finally,     velocity is applied to object
         _controller.move( Time.deltaTime * _velocity);
     }
 }
