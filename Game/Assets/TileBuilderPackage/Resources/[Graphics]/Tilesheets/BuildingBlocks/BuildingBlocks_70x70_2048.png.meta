@@ -1,0 +1,4887 @@
+fileFormatVersion: 2
+guid: 8dcdaf33996805140be54abf69205c3a
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 69
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cake
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCenter
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCliffleft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCliffRight
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalf
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfAlt
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfAltLeft
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfAltMid
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfAltRight
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfMid
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHalfRight
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHillLeft
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHillRight
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeHillRight2
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeMid
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cakeRight
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castle
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCenter
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1974
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCliffRight
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHalf
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHalfMid
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHalfRight
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHillLeft
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHillRight
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleHillRight2
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleLeft
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleMid
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: castleRight
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: choco
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCenter
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCliffRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalf
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfAlt
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfAltLeft
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfAltMid
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfAltRight
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfMid
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1900
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHalfRight
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHillLeft
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHillRight
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoHillRight2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoLeft
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoMid
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chocoRight
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirt
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCenter
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCliffRight
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHalf
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHalfMid
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHalfRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHillLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHillRight
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtHillRight2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtLeft
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtMid
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dirtRight
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grass
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1826
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCenter
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCliffRight
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHalf
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHalfMid
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHalfRight
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHillLeft
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHillRight
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassHillRight2
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassLeft
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassMid
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: grassRight
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceBlock
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceBlockAlt
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceBlockHalf
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceBlockHalfAlt
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWater
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1752
+        width: 70
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterAlt
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1752
+        width: 70
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterDeep
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterDeepAlt
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterDeepStars
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterDeepStarsAlt
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1752
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterMid
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceWaterMidAlt
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidLava
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidLavaTop
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidLavaTop_mid
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sand
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCenter
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCliffRight
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHalf
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHalfMid
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHalfRight
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHillLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHillRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandHillRight2
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandLeft
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandMid
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sandRight
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snow
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCenter
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1678
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCliffRight
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHalf
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHalfMid
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHalfRight
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillLeft
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillRight
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillRight2
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowLeft
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowMid
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowRight
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowBallBigGround
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowGroundLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowGroundRight
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iceTreeDead
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tree
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesLeft
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowBallGround
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillHigh
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowHillLow
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowLeftFloor
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowMidFloor
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowRightFloor
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowWave
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1604
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesLeftSnowAlt
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesSnowLeft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesSnowRight
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesSnowRightAlt
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeBranchesSnowRightSnowAlt
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treePineSapling
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treePineSaplingAlt
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTop
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1530
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTopSnow
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1530
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunk
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBottom
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBottomAlt
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBottomAlt2
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBottomAlt3
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBranch
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBranchEndLeft
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBranchEndRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBranchLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkBranchRightAlt
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkSplitLeft
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkSplitRight
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treeTrunkTop
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: igloo
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iglooAlt
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iglooDoor
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1530
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iglooRoof
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iglooRoofLeft
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: iglooRoofRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: rockAlt
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowBall
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowBallBig
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1457
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikeTop
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1457
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesBottomAlt
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesTop
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesTopAlt
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesTopAlt2
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stone
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCenter
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCliffRight
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHalf
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHalfMid
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHalfRight
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: plant
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: plantAlt
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: rockAlt2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesBottom
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikesBottomAlt2
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1456
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHillLeft
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHillRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneHillRight2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneLeft
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneMid
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneRight
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stoneWall
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundra
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCenter
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCenter_rounded
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCliffLeft
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCliffLeftAlt
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCliffRight
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraCliffRightAlt
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHalf
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHalfLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHalfMid
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHalfRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHillLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHillLeft2
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHillRight
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraHillRight2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraLeft
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraMid
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tundraRight
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidWater
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1382
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidWaterTop
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: liquidWaterTop_mid
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltLeft
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltMid
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltMidAlt
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltRight
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltSpotsLeft
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltSpotsMid
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltSpotsMidAlt
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownAltSpotsRight
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownLeft
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownMid
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownMidAlt
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownRight
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownSpotsLeft
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownSpotsMid
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownSpotsMidAlt
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomBrownSpotsRight
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedAltLeft
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedAltMid
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedAltMidAlt
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedAltRight
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedLeft
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedMid
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedMidAlt
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomRedRight
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanAltLeft
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1308
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanAltMid
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanAltMidAlt
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanAltRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanLeft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanMid
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanMidAlt
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: shroomTanRight
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stem
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemBase
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemBaseAlt
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemCrown
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemShroom
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemTop
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemTopAlt
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stemVine
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tallShroom_brown
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tallShroom_red
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tallShroom_tan
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: anemometer
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: awningGreen
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: awningGreenRed
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: awningRed
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chimney
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chimneyLow
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tinyShroom_brown
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tinyShroom_red
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1233
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: tinyShroom_tan
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1234
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chimneyThin
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: clock
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorKnob
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorKnobAlt
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorLock
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorOpen
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorOpenTop
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorPlateTop
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorTop
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: doorWindowTop
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fenceGate
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fenceLong
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fenceLow
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeige
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeAlt
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeAlt2
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeBottomLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeBottomMid
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeBottomRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeMidLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeMidRight
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeTopLeft
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeTopMid
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseBeigeTopRight
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDark
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkAlt
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkAlt2
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1160
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkBottomLeft
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkBottomMid
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkBottomRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkMidLeft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkMidRight
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkTopLeft
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkTopMid
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1085
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseDarkTopRight
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGray
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayAlt
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayAlt2
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayBottomLeft
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayBottomMid
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayBottomRight
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayMidLeft
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayMidRight
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayTopLeft
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayTopMid
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: houseGrayTopRight
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: rockMoss
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: rockMossAlt
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyLeft
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyMid
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyRight
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyTopLeft
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyTopMid
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofGreyTopRight
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1086
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedLeft
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedMid
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedRight
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedTopLeft
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedTopMid
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofRedTopRight
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowLeft
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowMid
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowRight
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowTopLeft
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowTopMid
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: roofYellowTopRight
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signBed
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signCoin
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signCup
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signHangingBed
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signHangingCoin
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signHangingCup
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: window
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowCheckered
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighBottom
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighCheckeredBottom
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighCheckeredMid
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighCheckeredTop
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighLeadlightBottom
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighLeadlightMid
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighLeadlightTop
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1012
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighMid
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighOpenBottom
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighOpenMid
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighOpenTop
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowHighTop
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowLeadlight
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowLow
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowLowCheckered
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowLowLeadlight
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowLowOpen
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowOpen
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: candyBlue
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: candyGreen
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: candyRed
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: candyYellow
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: canePink
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: canePinkSmall
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: canePinkTop
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: canePinkTopAlt
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cherry
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cookieBrown
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cookieChoco
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cookiePink
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: creamChoco
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: creamMocca
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: creamPink
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: creamVanilla
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 938
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cupCake
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormGreenEnd
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormGreenHead
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormGreenMid
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormRedEnd
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormRedHead
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gummyWormRedMid
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: heart
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneChoco
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneChocoTop
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneGreen
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneGreenTop
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCanePink
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCanePinkTop
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneRed
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: hillCaneRedTop
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopBase
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopBaseBeige
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopBaseBrown
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopBaseCake
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopBasePink
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopFruitGreen
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopFruitRed
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopFruitYellow
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopGreen
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopRed
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopWhiteGreen
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 864
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lollipopWhiteRed
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: waffleChoco
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 790
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: wafflePink
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 790
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: waffleWhite
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 790
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneGreen
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneGreenSmall
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneGreenTop
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneGreenTopAlt
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneRed
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneRedSmall
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneRedTop
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: caneRedTopAlt
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bridge
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bridgeLogs
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxAlt
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxCoin
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxCoinAlt
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxCoin_disabled
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxCoinAlt_disabled
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxEmpty
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxExplosive
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxExplosiveAlt
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxExplosive_disabled
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxItem
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxItemAlt
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxItemAlt_disabled
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 790
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxItem_disabled
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: boxWarning
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: brickWall
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: door_closedMid
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: door_closedTop
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: door_openMid
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: door_openTop
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bomb
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bombFlash
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bush
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonBlue
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonBlue_pressed
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonGreen
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonGreen_pressed
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonRed
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonRed_pressed
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonYellow
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: buttonYellow_pressed
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cactus
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: chain
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 717
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: coinBronze
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 717
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: coinSilver
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 717
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fireBall
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 717
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagBlue
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagBlue2
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 716
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagBlueHanging
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 716
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagGreen
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 642
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagGreen2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagGreenHanging
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagRed
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 642
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagRed2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagRedHanging
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagYellow
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 642
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagYellow2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: flagYellowHanging
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: particleBrick1a
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: particleBrick1b
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: particleBrick2a
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: particleBrick2b
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gemBlue
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gemGreen
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gemRed
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: gemYellow
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: keyBlue
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: keyGreen
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: keyRed
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: keyYellow
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mushroomBrown
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mushroomRed
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: plantGreen
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: plantPurple
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: rock
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: snowhill
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 642
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: spikes
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: springboardDown
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: springboardUp
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: star
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: switchLeft
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: switchMid
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: switchRight
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: weight
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: weightChained
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fence
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: fenceBroken
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ladder_mid
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ladderTop
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lockBlue
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lockGreen
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lockRed
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lockYellow
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sign
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signExit
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signLeft
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: signRight
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 568
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: torchLit
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 570
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: torchLit2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 570
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: torch
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 570
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowAlt
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 570
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: coinGold
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 717
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

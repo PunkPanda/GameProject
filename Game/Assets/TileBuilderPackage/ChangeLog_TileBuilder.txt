@@ -1,0 +1,9 @@
+Changelog;
+
+2-7-2014
+========
+- Replaced backslashes to slashes for Mac users in filepaths. (Filepath would otherwise return errors).
+- The Tile Builder now works from inside the TileBuilderPackage folder, instead of dragging everything to your root.
+- Fixed an issue where on Mac systems, the tiles were being placed with an offset from the mouse position. (Thanks Zbyszek!)
+- Included credits to Kenney Vleugels for his awesome sprites.
+========
