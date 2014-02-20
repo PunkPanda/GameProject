@@ -19,15 +19,23 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D _lastControllerColliderHit;
     private Vector3 _velocity;
 
+    enum PlayerState
+    {
+        STAND,
+        CROUCH,
+        CRAWL
+    };
+    PlayerState State;
         // bools
     bool jump = false;
     bool sprint = false;
     
     void Awake()
     {
-            // Get the component from the object, contains functions and data used in movement
+         // Get the component from the object, contains functions and data used in movement
         _controller = GetComponent<CharacterController2D>();
         _controller.onControllerCollidedEvent += onControllerCollider;
+        State = PlayerState.STAND;
     }
     
     
@@ -43,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (State == PlayerState.STAND)
+            Debug.Log("Stand");
+        else if (State == PlayerState.CROUCH)
+            Debug.Log("Crouch");
+        else if (State == PlayerState.CRAWL)
+            Debug.Log("Crawl");
+
         // Input
         if (Input.GetButtonDown("Jump") && _controller.isGrounded)
         {
@@ -52,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
         sprint = Input.GetButton("Sprint");
  
         float h = Input.GetAxis("Horizontal");
+        bool c = Input.GetButtonDown("CrouchDown");
+        bool s = Input.GetButtonDown("StandUp");
 
         // Create local velocity to be used in all further calculations
         _velocity = _controller.velocity;
@@ -60,8 +77,21 @@ public class PlayerMovement : MonoBehaviour
         if (_controller.isGrounded)
         {
             _velocity.y = 0; // On the ground, no need for y
-        
-            if (h > 0) // Right
+            if(c)
+            {
+                if(State != PlayerState.CRAWL)
+                {
+                    ++State;
+                }
+            }
+            else if(s)
+            {
+                if(State != PlayerState.STAND)
+                {
+                    --State;
+                }
+            }
+            if(h > 0) // Right
             {
                 normalizedHorizontalSpeed = 1;
 
@@ -92,30 +122,8 @@ public class PlayerMovement : MonoBehaviour
             if (h > 0) // Right
             {
                 normalizedHorizontalSpeed = horizontalAirVel + 0.5f;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-                ;
-            } else if (h < 0) // Left
+            } 
+            else if (h < 0) // Left
             {
                 normalizedHorizontalSpeed = horizontalAirVel - 0.5f;
             }
@@ -131,22 +139,13 @@ public class PlayerMovement : MonoBehaviour
         {
             _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
             jump = false;
-        };;;;;;
+        }
        
         // Variables and junk determine movement smoothness
         var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping;
-        ;
-        ;
-        ;
-        ;
+
 
         // Final velocity.x is calculated, sprinting is checked as well
-        ;
-        ;
-        ;
-        ;
-        ;;;;;;;
-        ;
         if (sprint && _controller.isGrounded)
             _velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor);
         else
