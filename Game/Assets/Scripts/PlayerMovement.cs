@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit2D _lastControllerColliderHit;
     private Vector3 _velocity;
 
+    private BoxCollider2D body;
+
     enum PlayerState
     {
         STAND,
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
          // Get the component from the object, contains functions and data used in movement
         _controller = GetComponent<CharacterController2D>();
+        body = gameObject.GetComponent<BoxCollider2D>();
         _controller.onControllerCollidedEvent += onControllerCollider;
         State = PlayerState.STAND;
     }
@@ -82,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
                 if(State != PlayerState.CRAWL)
                 {
                     ++State;
+                    body.size = body.size - new Vector2(0, 0.5f);
+                    //_controller.boxCollider.collider2D.transform.localScale = _controller.boxCollider.collider2D.transform.localScale - new Vector3(0, 0.5f, 0);
                 }
             }
             else if(s)
@@ -89,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
                 if(State != PlayerState.STAND)
                 {
                     --State;
+                    body.size = body.size + new Vector2(0, 0.5f);
+                    //_controller.boxCollider.collider2D.transform.localScale = _controller.boxCollider.collider2D.transform.localScale + new Vector3(0, 0.5f, 0);
                 }
             }
             if(h > 0) // Right
