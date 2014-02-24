@@ -57,12 +57,12 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
-		if (State == PlayerState.STAND)
+		/*if (State == PlayerState.STAND)
 			Debug.Log("Stand");
 		else if (State == PlayerState.CROUCH)
 			Debug.Log("Crouch");
 		else if (State == PlayerState.CRAWL)
-			Debug.Log("Crawl");
+			Debug.Log("Crawl");*/
 
 			// Input
 		if (Input.GetButtonDown("Jump") && _controller.isGrounded)
@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
 				normalizedHorizontalSpeed = horizontalAirVel;
 			}
 			
-			Debug.Log(normalizedHorizontalSpeed);
+			//Debug.Log(normalizedHorizontalSpeed);
 		}
 
 			// Jump data
