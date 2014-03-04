@@ -4,19 +4,11 @@ using System;
 using System.Collections.Generic;
 
 
-[RequireComponent( typeof( BoxCollider2D ) )]
+[RequireComponent( typeof( BoxCollider2D ), typeof( Rigidbody2D ) )]
 public class CharacterController2D : MonoBehaviour
 {
 	#region internal types
-
-	private enum MoveDirection : int
-	{
-		Right = 1,
-		Left = -1,
-		Up = 1,
-		Down = -1
-	}
-
+	public bool becameAerialThisFrame;
 	private struct CharacterRaycastOrigins
 	{
 		public Vector3 topRight;
@@ -33,6 +25,14 @@ public class CharacterController2D : MonoBehaviour
 		public bool below;
 		public bool becameGroundedThisFrame;
 
+
+
+		public bool hasCollision()
+		{
+			return below || right || left || above;
+		}
+
+
 		public void reset()
 		{
 			right = left = above = below = becameGroundedThisFrame = false;
@@ -48,14 +48,16 @@ public class CharacterController2D : MonoBehaviour
 	#endregion
 
 
-	#region properties and fields
-
-    public bool becameAerialThisFrame;
+	#region events, properties and fields
 
 	public event Action<RaycastHit2D> onControllerCollidedEvent;
+	public event Action<Collider2D> onTriggerEnterEvent;
+	public event Action<Collider2D> onTriggerStayEvent;
+	public event Action<Collider2D> onTriggerExitEvent;
+
 
 	/// <summary>
-	/// toggles if the RigidBody2D velocity should be used for movement or if Transform.Translate will be used
+	/// toggles if the RigidBody2D methods should be used for movement or if Transform.Translate will be used
 	/// </summary>
 	public bool usePhysicsForMovement = false;
 
@@ -63,7 +65,7 @@ public class CharacterController2D : MonoBehaviour
 	/// defines how far in from the edges of the collider rays are cast from. If cast with a 0 extent it will often result in ray hits that are
 	/// not desired (for example a foot collider casting horizontally from directly on the surface can result in a hit)
 	/// </summary>
-	[Range( 0, 0.3f )]
+	[Range( 0.001f, 0.3f )]
 	public float skinWidth = 0.02f;
 
 	/// <summary>
@@ -89,11 +91,22 @@ public class CharacterController2D : MonoBehaviour
 	[Range( 2, 20 )]
 	public int totalVerticalRays = 4;
 
+	/// <summary>
+	/// if true, a new GameObject named CC2DTriggerHelper will be created in Awake and latched on via a DistanceJoint2D
+	/// to the player so that trigger messages can be received
+	/// </summary>
+	public bool createTriggerHelperGameObject = false;
+	
+	[Range( 0.8f, 0.999f )]
+	public float triggerHelperBoxColliderScale = 0.95f;
+
 
 	[HideInInspector]
 	public new Transform transform;
 	[HideInInspector]
 	public BoxCollider2D boxCollider;
+	[HideInInspector]
+	public Rigidbody2D rigidBody2D;
 
 	[HideInInspector]
 	[NonSerialized]
@@ -102,6 +115,8 @@ public class CharacterController2D : MonoBehaviour
 	[NonSerialized]
 	public Vector3 velocity;
 	public bool isGrounded { get { return collisionState.below; } }
+
+	private const float kSkinWidthFloatFudgeFactor = 0.001f;
 
 	#endregion
 
@@ -115,6 +130,12 @@ public class CharacterController2D : MonoBehaviour
 	/// stores our raycast hit during movement
 	/// </summary>
 	private RaycastHit2D _raycastHit;
+
+	/// <summary>
+	/// stores any raycast hits that occur this frame. we have to store them in case we get a hit moving
+	/// horizontally and vertically so that we can send the events after all collision state is set
+	/// </summary>
+	private List<RaycastHit2D> _raycastHitsThisFrame = new List<RaycastHit2D>( 2 );
 
 	// horizontal/vertical movement data
 	private float _verticalDistanceBetweenRays;
@@ -131,6 +152,7 @@ public class CharacterController2D : MonoBehaviour
 		// cache some components
 		transform = GetComponent<Transform>();
 		boxCollider = GetComponent<BoxCollider2D>();
+		rigidBody2D = GetComponent<Rigidbody2D>();
 
 		// figure out the distance between our rays in both directions
 		// horizontal
@@ -140,6 +162,30 @@ public class CharacterController2D : MonoBehaviour
 		// vertical
 		var colliderUseableWidth = boxCollider.size.x * Mathf.Abs( transform.localScale.x ) - ( 2f * skinWidth );
 		_horizontalDistanceBetweenRays = colliderUseableWidth / ( totalVerticalRays - 1 );
+
+		if( createTriggerHelperGameObject )
+			createTriggerHelper();
+	}
+
+
+	public void OnTriggerEnter2D( Collider2D col )
+	{
+		if( onTriggerEnterEvent != null )
+			onTriggerEnterEvent( col );
+	}
+	
+	
+	public void OnTriggerStay2D( Collider2D col )
+	{
+		if( onTriggerStayEvent != null )
+			onTriggerStayEvent( col );
+	}
+	
+	
+	public void OnTriggerExit2D( Collider2D col )
+	{
+		if( onTriggerExitEvent != null )
+			onTriggerExitEvent( col );
 	}
 
 	#endregion
@@ -149,6 +195,37 @@ public class CharacterController2D : MonoBehaviour
 	private void DrawRay( Vector3 start, Vector3 dir, Color color )
 	{
 		Debug.DrawRay( start, dir, color );
+	}
+
+
+	/// <summary>
+	/// this is called internally if createTriggerHelperGameObject is true. It is provided as a public method
+	/// in case you want to grab a handle on the GO created to modify it in some way. Note that by default only
+	/// collisions with triggers will be allowed to pass through and fire the events.
+	/// </summary>
+	public GameObject createTriggerHelper()
+	{
+		var go = new GameObject( "PlayerTriggerHelper" );
+		go.hideFlags = HideFlags.HideInHierarchy;
+		go.layer = gameObject.layer;
+		// scale is slightly less so that we don't get trigger messages when colliding with non-triggers
+		go.transform.localScale = transform.localScale * triggerHelperBoxColliderScale;
+
+		go.AddComponent<CC2DTriggerHelper>().setParentCharacterController( this );
+
+		var rb = go.AddComponent<Rigidbody2D>();
+		rb.mass = 0f;
+		rb.gravityScale = 0f;
+
+		var bc = go.AddComponent<BoxCollider2D>();
+		bc.size = boxCollider.size;
+		bc.isTrigger = true;
+
+		var joint = go.AddComponent<DistanceJoint2D>();
+		joint.connectedBody = rigidbody2D;
+		joint.distance = 0f;
+
+		return go;
 	}
 
 
@@ -163,7 +240,7 @@ public class CharacterController2D : MonoBehaviour
 	private void primeRaycastOrigins( Vector3 futurePosition, Vector3 deltaMovement )
 	{
 		var scaledColliderSize = new Vector2( boxCollider.size.x * Mathf.Abs( transform.localScale.x ), boxCollider.size.y * Mathf.Abs( transform.localScale.y ) ) / 2;
-		var scaledCenter = new Vector2 (boxCollider.center.x * transform.localScale.x ,boxCollider.center.y * transform.localScale.y );
+		var scaledCenter = new Vector2( boxCollider.center.x * transform.localScale.x, boxCollider.center.y * transform.localScale.y );
 
 		_raycastOrigins.topRight = transform.position + new Vector3( scaledCenter.x + scaledColliderSize.x, scaledCenter.y + scaledColliderSize.y );
 		_raycastOrigins.topRight.x -= skinWidth;
@@ -200,16 +277,14 @@ public class CharacterController2D : MonoBehaviour
 		{
 			var ray = new Vector2( initialRayOrigin.x, initialRayOrigin.y + i * _verticalDistanceBetweenRays );
 
-			DrawRay( ray, rayDirection, Color.red );
+			DrawRay( ray, rayDirection.normalized * rayDistance, Color.red );
 			_raycastHit = Physics2D.Raycast( ray, rayDirection, rayDistance, platformMask & ~oneWayPlatformMask );
 			if( _raycastHit )
 			{
 				// the bottom ray can hit slopes but no other ray can so we have special handling for those cases
 				if( i == 0 && handleHorizontalSlope( ref deltaMovement, Vector2.Angle( _raycastHit.normal, Vector2.up ), isGoingRight ) )
 				{
-					if( onControllerCollidedEvent != null )
-						onControllerCollidedEvent( _raycastHit );
-
+					_raycastHitsThisFrame.Add( _raycastHit );
 					break;
 				}
 
@@ -229,12 +304,11 @@ public class CharacterController2D : MonoBehaviour
 					collisionState.left = true;
 				}
 
-				if( onControllerCollidedEvent != null )
-					onControllerCollidedEvent( _raycastHit );
+				_raycastHitsThisFrame.Add( _raycastHit );
 
 				// we add a small fudge factor for the float operations here. if our rayDistance is smaller
 				// than the width + fudge bail out because we have a direct impact
-				if( rayDistance < skinWidth + 0.001f )
+				if( rayDistance < skinWidth + kSkinWidthFloatFudgeFactor )
 					break;
 			}
 		}
@@ -244,7 +318,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool handleHorizontalSlope( ref Vector3 deltaMovement, float angle, bool isGoingRight )
 	{
 		// disregard 90 degree angles (walls)
-		if( angle == 90f )
+		if( Mathf.RoundToInt( angle ) == 90 )
 			return false;
 
 		// if we can walk on slopes and our angle is small enough we need to move up
@@ -293,6 +367,9 @@ public class CharacterController2D : MonoBehaviour
 		var rayDirection = isGoingUp ? Vector2.up : -Vector2.up;
 		var initialRayOrigin = isGoingUp ? _raycastOrigins.topLeft : _raycastOrigins.bottomLeft;
 
+		// apply our horizontal deltaMovement here so that we do our raycast from the actual position we would be in if we had moved
+		initialRayOrigin.x += deltaMovement.x;
+
 		// if we are moving up, we should ignore the layers in oneWayPlatformMask
 		var mask = platformMask;
 		if( isGoingUp )
@@ -302,7 +379,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			var ray = new Vector2( initialRayOrigin.x + i * _horizontalDistanceBetweenRays, initialRayOrigin.y );
 
-			DrawRay( ray, rayDirection, Color.red );
+			DrawRay( ray, rayDirection.normalized * rayDistance, Color.red );
 			_raycastHit = Physics2D.Raycast( ray, rayDirection, rayDistance, mask );
 			if( _raycastHit )
 			{
@@ -322,19 +399,18 @@ public class CharacterController2D : MonoBehaviour
 					collisionState.below = true;
 				}
 
-				if( onControllerCollidedEvent != null )
-					onControllerCollidedEvent( _raycastHit );
+				_raycastHitsThisFrame.Add( _raycastHit );
 
 				// we add a small fudge factor for the float operations here. if our rayDistance is smaller
 				// than the width + fudge bail out because we have a direct impact
-				if( rayDistance < skinWidth + 0.001f )
+				if( rayDistance < skinWidth + kSkinWidthFloatFudgeFactor )
 					return;
 			}
 		}
 	}
 
 	#endregion
-
+	
 
 	public void move( Vector3 deltaMovement )
 	{
@@ -343,6 +419,7 @@ public class CharacterController2D : MonoBehaviour
 
 		// clear our state
 		collisionState.reset();
+		_raycastHitsThisFrame.Clear();
 
 		var desiredPosition = transform.position + deltaMovement;
 		primeRaycastOrigins( desiredPosition, deltaMovement );
@@ -355,10 +432,15 @@ public class CharacterController2D : MonoBehaviour
 		if( deltaMovement.y != 0 )
 			moveVertically( ref deltaMovement );
 
+
 		// move then update our state
 		if( usePhysicsForMovement )
 		{
+#if UNITY_4_5 || UNITY_4_6
+			rigidbody2D.MovePosition( transform.position + deltaMovement );
+#else
 			rigidbody2D.velocity = deltaMovement / Time.fixedDeltaTime;
+#endif
 			velocity = rigidbody2D.velocity;
 		}
 		else
@@ -371,10 +453,17 @@ public class CharacterController2D : MonoBehaviour
 		if( !wasGroundedBeforeMoving && collisionState.below )
 			collisionState.becameGroundedThisFrame = true;
 
-        if (wasGroundedBeforeMoving && !collisionState.below)
-            becameAerialThisFrame = true;
-        else
-            becameAerialThisFrame = false;
+		if (wasGroundedBeforeMoving && !collisionState.below)
+			becameAerialThisFrame = true;
+		else
+			becameAerialThisFrame = false;
+
+		// send off the collision events if we have a listener
+		if( onControllerCollidedEvent != null )
+		{
+			for( var i = 0; i < _raycastHitsThisFrame.Count; i++ )
+				onControllerCollidedEvent( _raycastHitsThisFrame[i] );
+		}
 	}
 
 }

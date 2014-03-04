@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
 	private BoxCollider2D body;
 
+	private GameObject interact = null;
+
 	enum PlayerState
 	{
 		STAND,
@@ -42,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
 		body = gameObject.GetComponent<BoxCollider2D>();
 		State = PlayerState.STAND;
+
+		// listen to some events for illustration purposes
+		_controller.onControllerCollidedEvent += onControllerCollider;
+		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
+		_controller.onTriggerExitEvent += onTriggerExitEvent;
 	}
     
     
@@ -75,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
 		float h = Input.GetAxis("Horizontal");
 		bool c = Input.GetButtonDown("CrouchDown");
 		bool s = Input.GetButtonDown("StandUp");
+		bool e = Input.GetButtonDown("Use");
 
 			// Create local velocity to be used in all further calculations
 		_velocity = _controller.velocity;
@@ -182,5 +190,23 @@ public class PlayerMovement : MonoBehaviour
 
 			// Finally, velocity is applied to object
 		_controller.move( Time.deltaTime * _velocity);
+
+		if (e)
+		{
+			if (interact.tag == "Door")
+			{
+				Application.LoadLevel(interact.guiText.text);
+			}
+		}
+	}
+
+	void onTriggerEnterEvent( Collider2D col )
+	{
+		interact = col.gameObject;
+	}
+
+	void onTriggerExitEvent (Collider2D col)
+	{
+		interact = null;
 	}
 }
