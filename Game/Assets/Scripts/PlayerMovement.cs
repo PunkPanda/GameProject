@@ -42,16 +42,18 @@ public class PlayerMovement : MonoBehaviour
 		_controller = GetComponent<CharacterController2D>();
 		_controller.onControllerCollidedEvent += onControllerCollider;
 
+			// Crouch junk
 		body = gameObject.GetComponent<BoxCollider2D>();
 		State = PlayerState.STAND;
 
-		// listen to some events for illustration purposes
+			// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
 	}
     
-    
+    #region Event Listeners
+
 	void onControllerCollider( RaycastHit2D hit )
 	{
 			// bail out on plain old ground hits
@@ -61,6 +63,18 @@ public class PlayerMovement : MonoBehaviour
 		// logs any collider hits if uncommented
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
+
+	void onTriggerEnterEvent( Collider2D col )
+	{
+		interact = col.gameObject;
+	}
+
+	void onTriggerExitEvent (Collider2D col)
+	{
+		interact = null;
+	}
+
+	#endregion
 
 	void Update()
 	{
@@ -83,6 +97,14 @@ public class PlayerMovement : MonoBehaviour
 		bool c = Input.GetButtonDown("CrouchDown");
 		bool s = Input.GetButtonDown("StandUp");
 		bool e = Input.GetButtonDown("Use");
+
+		if (e)
+		{
+			if (interact.tag == "Door")
+			{
+				Application.LoadLevel(interact.guiText.text);
+			}
+		}
 
 			// Create local velocity to be used in all further calculations
 		_velocity = _controller.velocity;
@@ -190,23 +212,5 @@ public class PlayerMovement : MonoBehaviour
 
 			// Finally, velocity is applied to object
 		_controller.move( Time.deltaTime * _velocity);
-
-		if (e)
-		{
-			if (interact.tag == "Door")
-			{
-				Application.LoadLevel(interact.guiText.text);
-			}
-		}
-	}
-
-	void onTriggerEnterEvent( Collider2D col )
-	{
-		interact = col.gameObject;
-	}
-
-	void onTriggerExitEvent (Collider2D col)
-	{
-		interact = null;
 	}
 }
