@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
   void Awake ()
   {
     // Setting up the reference.
-    player = GameObject.FindGameObjectWithTag("Player").transform;
+    player = null;
   }
 
 
@@ -37,7 +37,13 @@ public class CameraFollow : MonoBehaviour
 
   void FixedUpdate ()
   {
-    TrackPlayer();
+	if (player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player").transform;
+		} else
+		{
+			TrackPlayer();
+		}
   }
   
   

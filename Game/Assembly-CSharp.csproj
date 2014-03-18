@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\FrameRate.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\playerSpawn.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Camera]\LerpToPlayer.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Character]\Player.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Interactive]\TileAligner.cs" />
