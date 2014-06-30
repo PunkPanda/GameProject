@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerSpawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="104" Column="5" />
-      <File FileName="Assets\Scripts\playerSpawn.cs" Line="13" Column="32" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="169" Column="55" />
+      <File FileName="Assets\Scripts\CharacterController2D.cs" Line="242" Column="84" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

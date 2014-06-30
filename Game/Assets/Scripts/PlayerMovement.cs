@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
 		} 
 		else    // Aerial movement
 		{
-			if (_controller.becameAerialThisFrame)
+			if (_controller.collisionState.wasGroundedLastFrame)
 			{
 				if (sprint)
 					horizontalAirVel = 0.5f * normalizedHorizontalSpeed*2;
