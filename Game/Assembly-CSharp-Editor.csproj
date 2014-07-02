@@ -46,12 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\TileBuilderPackage\Editor\AutoSaveOnPlayMode.cs" />
-     <Compile Include="Assets\TileBuilderPackage\Editor\GridEditor.cs" />
      <Compile Include="Assets\TileBuilderPackage\Editor\GridWindow.cs" />
-     <Compile Include="Assets\TileBuilderPackage\Editor\InspectorLockToggle.cs" />
-     <None Include="Assets\TileBuilderPackage\Resources\SaveData\TagData.txt.txt" />
+     <Compile Include="Assets\TileBuilderPackage\Editor\IntegratedUI.cs" />
+     <Compile Include="Assets\TileBuilderPackage\Editor\Utilities\AutoSaveOnPlayMode.cs" />
      <None Include="Assets\TileBuilderPackage\Resources\SaveData\_DefaultData.txt" />
+     <None Include="Assets\TileBuilderPackage\Resources\SaveData\EditorWindowSettings.txt" />
      <None Include="Assets\TileBuilderPackage\Resources\SaveData\TagData.txt" />
      <None Include="Assets\TileBuilderPackage\ChangeLog_TileBuilder.txt" />
  <Reference Include="UnityEditor.Graphs">

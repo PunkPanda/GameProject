@@ -56,11 +56,11 @@
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Camera]\LerpToPlayer.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Character]\Player.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Interactive]\TileAligner.cs" />
-     <Compile Include="Assets\TileBuilderPackage\[Scripts]\[LevelEditor]\Grid.cs" />
+     <Compile Include="Assets\TileBuilderPackage\[Scripts]\[LevelEditor]\RowData.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[LevelEditor]\TileObjectRawData.cs" />
      <Compile Include="Assets\TileBuilderPackage\[Scripts]\[Libraries]\ImageLibrary.cs" />
-     <None Include="Assets\TileBuilderPackage\Resources\SaveData\TagData.txt.txt" />
      <None Include="Assets\TileBuilderPackage\Resources\SaveData\_DefaultData.txt" />
+     <None Include="Assets\TileBuilderPackage\Resources\SaveData\EditorWindowSettings.txt" />
      <None Include="Assets\TileBuilderPackage\Resources\SaveData\TagData.txt" />
      <None Include="Assets\TileBuilderPackage\ChangeLog_TileBuilder.txt" />
   </ItemGroup>

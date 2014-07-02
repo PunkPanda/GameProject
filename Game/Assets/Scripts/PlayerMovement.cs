@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private BoxCollider2D body;
 
-	private GameObject interact = null;
+	//private GameObject interact = null;
 
 	enum PlayerState
 	{
@@ -48,8 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
 			// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
-		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
-		_controller.onTriggerExitEvent += onTriggerExitEvent;
+		/*_controller.onTriggerEnterEvent += onTriggerEnterEvent;
+		_controller.onTriggerExitEvent += onTriggerExitEvent;*/
 	}
     
     #region Event Listeners
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 		//Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
 	}
 
-	void onTriggerEnterEvent( Collider2D col )
+	/*void onTriggerEnterEvent( Collider2D col )
 	{
 		interact = col.gameObject;
 	}
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
 	void onTriggerExitEvent (Collider2D col)
 	{
 		interact = null;
-	}
+	}*/
 
 	#endregion
 
@@ -98,13 +98,13 @@ public class PlayerMovement : MonoBehaviour
 		bool s = Input.GetButtonDown("StandUp");
 		bool e = Input.GetButtonDown("Use");
 
-		if (e)
+		/*if (e)
 		{
 			if (interact.tag == "Door")
 			{
 				Application.LoadLevel(interact.guiText.text);
 			}
-		}
+		}*/
 
 			// Create local velocity to be used in all further calculations
 		_velocity = _controller.velocity;

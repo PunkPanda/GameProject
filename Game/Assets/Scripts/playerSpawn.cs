@@ -10,7 +10,7 @@ public class playerSpawn : MonoBehaviour {
 	{
 		Object playah;
 
-		playah = Instantiate(Player, new Vector3(-2.27F, -6.91F), new Quaternion(0, 0, 0, 0));
+		playah = Instantiate(Player);
 	}
 	
 	// Update is called once per frame
