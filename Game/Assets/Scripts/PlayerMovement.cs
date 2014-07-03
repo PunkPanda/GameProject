@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
 	private BoxCollider2D body;
 
+	private Animator anim;
+
 	//private GameObject interact = null;
 
 	enum PlayerState
@@ -50,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		/*_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;*/
+
+		anim = GetComponent<Animator>();
 	}
     
     #region Event Listeners
@@ -89,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetButtonDown("Jump") && _controller.isGrounded)
 		{
 			jump = true;
+			anim.SetBool("Jump", true);
+			anim.SetBool("In Air", true);
 		}
 
 		sprint = Input.GetButton("Sprint");
@@ -210,7 +216,17 @@ public class PlayerMovement : MonoBehaviour
 			// Gravity is taken care of
 		_velocity.y += Time.deltaTime * gravity;
 
+		if (_controller.collisionState.becameGroundedThisFrame && anim.GetBool("In Air") == true)
+		{
+			anim.SetBool("Jump", false);
+			anim.SetBool("In Air", false);
+
+			_velocity.Set(0, 0, 0);
+		}
+
 			// Finally, velocity is applied to object
 		_controller.move( Time.deltaTime * _velocity);
+
+		anim.SetFloat("Speed", Mathf.Abs(_velocity.x));
 	}
 }
