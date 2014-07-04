@@ -8,9 +8,9 @@ public class playerSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
-		Object playah;
+		//Object playah;
 
-		playah = Instantiate(Player);
+		//playah = Instantiate(Player);
 	}
 	
 	// Update is called once per frame

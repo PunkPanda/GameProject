@@ -39,7 +39,7 @@ public class CameraFollow : MonoBehaviour
   {
 	if (player == null)
 		{
-			player = GameObject.FindGameObjectWithTag("Playah").transform;
+			player = GameObject.FindGameObjectWithTag("Player").transform;
 		} else
 		{
 			TrackPlayer();

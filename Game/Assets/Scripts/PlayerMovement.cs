@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			jump = true;
 			anim.SetBool("Jump", true);
-			anim.SetBool("In Air", true);
 		}
 
 		sprint = Input.GetButton("Sprint");
@@ -216,10 +215,9 @@ public class PlayerMovement : MonoBehaviour
 			// Gravity is taken care of
 		_velocity.y += Time.deltaTime * gravity;
 
-		if (_controller.collisionState.becameGroundedThisFrame && anim.GetBool("In Air") == true)
+		if (_controller.collisionState.becameGroundedThisFrame && anim.GetBool("Jump") == true)
 		{
 			anim.SetBool("Jump", false);
-			anim.SetBool("In Air", false);
 
 			_velocity.Set(0, 0, 0);
 		}
