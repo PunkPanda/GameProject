@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private Animator anim;
 
+	private float squatTimer = 0;
 	//private GameObject interact = null;
 
 	enum PlayerState
@@ -198,8 +199,14 @@ public class PlayerMovement : MonoBehaviour
 			// Jump data
 		if (jump)
 		{
-			_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-			jump = false;
+			if(squatTimer < .2)
+				squatTimer += Time.deltaTime;
+			else if(squatTimer >= .2)
+			{
+				_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+				jump = false;
+				squatTimer = 0;
+			}
 		}
 
 			// Variables and junk determine movement smoothness
