@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public float walkSpeed = 8f;
 	public float sprintSpeed = 120f;
 	public float crouchSpeed = 5f;
+	public float crouchSprintSpeed = 7f;
 	public float groundDamping = 20f;
 	public float inAirDamping = 5f;
 	public float jumpHeight = 3f;
@@ -100,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 		sprint = Input.GetButton("Sprint");
+		anim.SetBool("Sprint", sprint);
  
 		float h = Input.GetAxis("Horizontal");
 		bool c = Input.GetButtonDown("CrouchDown");
@@ -124,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
             
 			if (c)
 			{
-				if (State != PlayerState.CRAWL)
+				if (State != PlayerState.CROUCH)
 				{
 					anim.SetBool("Crouch", true);
 					++State;
@@ -217,12 +219,14 @@ public class PlayerMovement : MonoBehaviour
 		var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping;
 		
         	// Final velocity.x is calculated, sprinting is checked as well
-		if (sprint && _controller.isGrounded)
+		if (sprint && _controller.isGrounded && State != PlayerState.CROUCH)
 			_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * sprintSpeed, Time.deltaTime * smoothedMovementFactor);
 		else if (State != PlayerState.CROUCH)
 			_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * walkSpeed, Time.deltaTime * smoothedMovementFactor);
-		else
+		else if (State == PlayerState.CROUCH && !sprint)
 			_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * crouchSpeed, Time.deltaTime * smoothedMovementFactor);
+		else if (State == PlayerState.CROUCH && sprint)
+			_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * crouchSprintSpeed, Time.deltaTime * smoothedMovementFactor);
 
 
 			// Gravity is taken care of
