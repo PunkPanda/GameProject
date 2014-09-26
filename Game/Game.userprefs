@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraFollow.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="129" Column="36" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="247" Column="2" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="245" Column="50" />
+      <File FileName="Assets\Scripts\CameraFollow.cs" Line="38" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

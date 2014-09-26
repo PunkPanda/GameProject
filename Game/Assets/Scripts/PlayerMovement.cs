@@ -242,6 +242,6 @@ public class PlayerMovement : MonoBehaviour
 			// Finally, velocity is applied to object
 		_controller.move( Time.deltaTime * _velocity);
 
-		anim.SetFloat("Speed", Mathf.Abs(_velocity.x));
+		anim.SetFloat("Speed", Mathf.Abs(_velocity.x));		
 	}
 }
